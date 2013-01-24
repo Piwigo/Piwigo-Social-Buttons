@@ -1,0 +1,95 @@
+.socialbutt {
+  display:inline-block;
+  vertical-align:top;
+  margin:10px;
+  width:500px;
+  border:10px solid #f9f9f9;
+  border-radius:10px;
+  box-shadow:0 0 5px rgba(0,0,0,0.2);
+}
+.socialbutt table {
+  border-spacing: 0px;
+  width:100%;
+}
+
+.socialbutt td {
+  width:50%;
+  padding:10px 5px;
+  background-color:#ECF6FA;
+  border:1px solid #fff;
+  border-right-color:#CDE8F4;
+  border-bottom-color:#CDE8F4;
+  text-align:center;
+  vertical-align:center;
+  font-weight:normal;
+}
+.socialbutt thead td {
+  border-top:none;
+}
+.socialbutt tr td:last-child {
+  border-right:none;
+}
+.socialbutt tbody tr:last-child td {
+  border-bottom:none;
+}
+.socialbutt tr.button td {
+  padding:10px 20px;
+}
+.socialbutt tr.button td:hover {
+  background-color:#D0E7F2;
+}
+.socialbutt tr.property td:first-child {
+  font-weight:bold;
+}
+.socialbutt tbody tr td:first-child {
+  text-align:right;
+}
+.socialbutt tbody tr td:last-child {
+  text-align:left;
+}
+
+.socialbutt img {
+  vertical-align:bottom;
+}
+
+.socialbutt input[type='text'], .socialbutt select {
+  background:#eee;
+  color:#888;
+  border:1px solid #aaa;
+  border-radius:4px;
+  box-shadow:inset 0 1px 0 rgba(0,0,0,0.05);
+  padding:5px;
+}
+.socialbutt input[type='text']:focus, .socialbutt select:focus {
+  background:#fff;
+  border-color:#3399ff;
+}
+
+.submit {
+  display:inline-block;
+  margin:10px;
+}
+.submit input {
+  background: #33bbee;
+  background: -moz-linear-gradient(top,  #33bbee 0%, #339dde 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#33bbee), color-stop(100%,#339dde));
+  background: -webkit-linear-gradient(top,  #33bbee 0%,#339dde 100%);
+  background: -o-linear-gradient(top,  #33bbee 0%,#339dde 100%);
+  background: -ms-linear-gradient(top,  #33bbee 0%,#339dde 100%);
+  background: linear-gradient(to bottom,  #33bbee 0%,#339dde 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33bbee', endColorstr='#339dde',GradientType=0 );
+  
+  border-color: #3399DD #3399DD #2288CC;
+  color: #FFFFFF !important;
+  font-size: 14px;
+  text-shadow: -1px -1px 0 #3399DD;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  padding: 5px 9px !important;
+  letter-spacing:0.1em;
+}
+.submit input:hover {
+  box-shadow: 0 0 5px #2288CC;
+  border-color: #3399DD #3399DD #2288CC;
+}
