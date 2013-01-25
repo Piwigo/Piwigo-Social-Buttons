@@ -25,6 +25,9 @@ $lang['Button position on picture page'] = 'θέση Κουμπιού στη σ�
 $lang['Toolbar'] = 'Μπάρα Εργαλείων';
 $lang['Top'] = 'Κορυφή';
 $lang['Annotation'] = 'Σχόλιο';
-$lang['Bubble'] = 'Bubble';
+$lang['Bubble'] = 'Συννεφάκι';
 $lang['Inline text'] = 'Inline κείμενο';
+$lang['Right bubble'] = 'Συννεφάκι στα δεξιά';
+$lang['Top bubble'] = 'Συννεφάκι στην κορυφή';
+$lang['Button type'] = 'Τύπος Κουμπιού';
 ?>
