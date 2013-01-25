@@ -29,4 +29,7 @@ $lang['Top'] = 'Topo';
 $lang['Annotation'] = 'Anotação';
 $lang['Shared picture size'] = 'Tamanho da foto compartilhada';
 $lang['Via'] = 'Via';
+$lang['Button type'] = 'Tipo de botão';
+$lang['Right bubble'] = 'Bolha a direita';
+$lang['Top bubble'] = 'Bolha no topo';
 ?>
