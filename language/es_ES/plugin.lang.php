@@ -8,4 +8,7 @@ $lang['Annotation'] = 'Anotación';
 $lang['Bubble'] = 'Burbuja';
 $lang['Inline text'] = 'Texto en linea.';
 $lang['Via'] = 'Via';
+$lang['Button type'] = 'Tipo de botón';
+$lang['Right bubble'] = 'Burbuja derecha';
+$lang['Top bubble'] = 'Burbuja superior';
 ?>
