@@ -27,4 +27,7 @@ $lang['Button position on picture page'] = 'Plassering på bildeside';
 $lang['Inline text'] = 'Inni teksten';
 $lang['Toolbar'] = 'Verktøylinje';
 $lang['Top'] = 'Topp';
+$lang['Button type'] = 'Knapptype';
+$lang['Right bubble'] = 'Høyre boble';
+$lang['Top bubble'] = 'Topp boble';
 ?>
