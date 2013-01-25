@@ -29,4 +29,7 @@ $lang['Bubble'] = '提示泡';
 $lang['Inline text'] = '内嵌文本';
 $lang['Shared picture size'] = '分享了相片尺寸';
 $lang['Via'] = '经由';
+$lang['Right bubble'] = '右边提示泡';
+$lang['Top bubble'] = '顶部提示泡';
+$lang['Button type'] = '按钮类型';
 ?>
