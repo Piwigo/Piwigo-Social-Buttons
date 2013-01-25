@@ -8,4 +8,7 @@ $lang['Annotation'] = 'Dipnot';
 $lang['Bubble'] = 'Baloncuk';
 $lang['Inline text'] = 'satır içi yazı';
 $lang['Via'] = 'Üzerinden';
+$lang['Right bubble'] = 'Sağ baloncuk';
+$lang['Top bubble'] = 'Üst baloncuk';
+$lang['Button type'] = 'Buton tipi';
 ?>
