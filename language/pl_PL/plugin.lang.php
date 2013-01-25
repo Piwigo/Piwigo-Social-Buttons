@@ -29,4 +29,7 @@ $lang['Bubble'] = 'Balonik';
 $lang['Inline text'] = 'Tekst';
 $lang['Shared picture size'] = 'Rozmiar udostępnianego zdjęcia';
 $lang['Via'] = 'via';
+$lang['Button type'] = 'Typ przycisku';
+$lang['Right bubble'] = 'Prawy bombelek';
+$lang['Top bubble'] = 'Górny bombelek';
 ?>
