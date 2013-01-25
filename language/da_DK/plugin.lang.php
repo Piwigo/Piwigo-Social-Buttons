@@ -29,4 +29,7 @@ $lang['Toolbar'] = 'Værktøjslinje';
 $lang['Top'] = 'Top';
 $lang['Shared picture size'] = 'Størrelse på delt billede';
 $lang['Via'] = 'Via';
+$lang['Button type'] = 'Knaptype';
+$lang['Right bubble'] = 'Højre boble';
+$lang['Top bubble'] = 'Topboble';
 ?>
