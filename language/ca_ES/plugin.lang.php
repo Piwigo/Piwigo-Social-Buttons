@@ -29,4 +29,7 @@ $lang['Bubble'] = 'Bombolla';
 $lang['Inline text'] = 'Text en línia';
 $lang['Shared picture size'] = 'Mida de les imatges compartides';
 $lang['Via'] = 'Via';
+$lang['Button type'] = 'Tipus de botó';
+$lang['Right bubble'] = 'Bombolla dreta';
+$lang['Top bubble'] = 'Bombolla superior';
 ?>
