@@ -8,4 +8,7 @@ $lang['Annotation'] = 'Anotācija';
 $lang['Bubble'] = 'Burbulis';
 $lang['Inline text'] = 'Inlain teksts';
 $lang['Via'] = 'Izmantojot';
+$lang['Top bubble'] = 'Augšējais burbulis';
+$lang['Right bubble'] = 'Labās puses burbulis';
+$lang['Button type'] = 'Taustiņa tips';
 ?>
