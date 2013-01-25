@@ -8,4 +8,7 @@ $lang['Annotation'] = 'Jegyzet';
 $lang['Bubble'] = 'Buborék';
 $lang['Inline text'] = 'Egysoros szöveg';
 $lang['Via'] = 'Keresztül';
+$lang['Right bubble'] = 'Buborék jobbra';
+$lang['Button type'] = 'Gomb típusa';
+$lang['Top bubble'] = 'Buborék fent';
 ?>
