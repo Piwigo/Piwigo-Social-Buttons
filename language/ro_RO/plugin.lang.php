@@ -29,4 +29,7 @@ $lang['Bubble'] = 'Balon';
 $lang['Inline text'] = 'Text în linie';
 $lang['Shared picture size'] = 'Dimensiunea imaginii distribuite';
 $lang['Via'] = 'Via';
+$lang['Button type'] = 'Tipul butonului';
+$lang['Right bubble'] = 'Balon dreapta';
+$lang['Top bubble'] = 'Balon sus';
 ?>
