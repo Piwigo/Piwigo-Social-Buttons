@@ -31,6 +31,11 @@ if (isset($_POST['submit']))
       'color' => $_POST['facebook']['color'],
       'layout' => $_POST['facebook']['layout'],
       ),
+    'pinterest' => array(
+      'enabled' => isset($_POST['pinterest']['enabled']),
+      'layout' => $_POST['pinterest']['layout'],
+      'img_size' => $_POST['pinterest']['img_size'],
+      ),
     );
   
   conf_update_param('SocialButtons', serialize($conf['SocialButtons']));

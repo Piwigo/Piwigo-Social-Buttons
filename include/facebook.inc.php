@@ -1,7 +1,7 @@
 <?php
 defined('SOCIALBUTT_PATH') or die('Hacking attempt!');
 
-function socialbutt_facebook($basename, $root_url, &$tpl_vars)
+function socialbutt_facebook($basename, $root_url, &$tpl_vars, &$buttons)
 {
   global $conf, $template, $user;
   
@@ -41,7 +41,7 @@ function socialbutt_facebook($basename, $root_url, &$tpl_vars)
   
   
   $template->set_filename('facebook_button', realpath(SOCIALBUTT_PATH .'template/facebook.tpl'));
-  return 'facebook_button';
+  $buttons[] = 'facebook_button';
 }
 
 ?>  

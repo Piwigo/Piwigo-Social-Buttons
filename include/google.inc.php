@@ -1,7 +1,7 @@
 <?php
 defined('SOCIALBUTT_PATH') or die('Hacking attempt!');
 
-function socialbutt_google($basename, $root_url, &$tpl_vars)
+function socialbutt_google($basename, $root_url, &$tpl_vars, &$buttons)
 {
   global $conf, $template, $user;
   
@@ -42,7 +42,7 @@ function socialbutt_google($basename, $root_url, &$tpl_vars)
   
   
   $template->set_filename('google_button', realpath(SOCIALBUTT_PATH .'template/google.tpl'));
-  return 'google_button';
+  $buttons[] = 'google_button';
 }
 
 ?>  

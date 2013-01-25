@@ -1,7 +1,7 @@
 <?php
 defined('SOCIALBUTT_PATH') or die('Hacking attempt!');
 
-function socialbutt_twitter($basename, $root_url, &$tpl_vars) 
+function socialbutt_twitter($basename, $root_url, &$tpl_vars, &$buttons) 
 {
   global $conf, $template, $user;
   
@@ -30,7 +30,7 @@ function socialbutt_twitter($basename, $root_url, &$tpl_vars)
   
   
   $template->set_filename('twitter_button', realpath(SOCIALBUTT_PATH .'template/twitter.tpl'));
-  return 'twitter_button';
+  $buttons[] = 'twitter_button';
 }
 
 ?>

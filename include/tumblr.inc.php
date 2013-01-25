@@ -1,9 +1,9 @@
 <?php
 defined('SOCIALBUTT_PATH') or die('Hacking attempt!');
 
-function socialbutt_tumblr($basename, $root_url, &$tpl_vars)
+function socialbutt_tumblr($basename, $root_url, &$tpl_vars, &$buttons)
 {
-  global $conf, $template, $user;
+  global $conf, $template;
   
   $tumblr_css = array(
     'share_1' => 'width:81px; height:20px;',
@@ -50,7 +50,7 @@ function socialbutt_tumblr($basename, $root_url, &$tpl_vars)
   
   
   $template->set_filename('tumblr_button', realpath(SOCIALBUTT_PATH .'template/tumblr.tpl'));
-  return 'tumblr_button';
+  $buttons[] = 'tumblr_button';
 }
 
 ?>  

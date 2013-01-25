@@ -49,7 +49,192 @@ jQuery("input.enable").change(function() {
 
 <br>
 
-<div class="socialbutt">
+
+<div class="socialbutt"> {* <!-- twitter --> *}
+<table>
+  <thead>
+    <tr><td colspan="2">
+      <label title="{if $twitter.enabled}{'Disable'|@translate}{else}{'Enable'|@translate}{/if}">
+        <img {if not $twitter.enabled}class="grayscale"{/if} src="{$SOCIALBUTT_PATH}template/images/twitter_logo.png"/>
+        <input class="enable" style="display:none;" type="checkbox" name="twitter[enabled]" {if $twitter.enabled}checked="checked"{/if}/>
+      </label>
+    </td></tr>
+  </thead>
+  <tbody {if not $twitter.enabled}style="display:none;"{/if}>
+    <tr class="property">
+      <td>
+        {'Button type'|@translate}
+      </td>
+      <td></td>
+    </tr>
+    <tr class="button">
+      <td><label>
+        20px
+        <img src="{$SOCIALBUTT_PATH}template/images/twitter_small.png"/>
+        <input type="radio" name="twitter[size]" value="small" {if $twitter.size=='small'}checked="checked"{/if}/>
+      </label></td>
+      <td><label>
+        <input type="radio" name="twitter[size]" value="large" {if $twitter.size=='large'}checked="checked"{/if}/>
+        <img src="{$SOCIALBUTT_PATH}template/images/twitter_large.png"/>
+        28px
+      </label></td>
+    </tr>
+    <tr class="property">
+      <td>
+        {'Annotation'|@translate}
+      </td>
+      <td>
+        <label><input type="radio" name="twitter[count]" value="none" {if $twitter.count=='none'}checked="checked"{/if}/> {'None'|@translate}</label><br>
+        <label><input type="radio" name="twitter[count]" value="bubble" {if $twitter.count=='bubble'}checked="checked"{/if}/> {'Bubble'|@translate}</label><br>
+      </td>
+    </tr>
+    <tr class="property">
+      <td>
+        <label for="twitter_via">{'Via'|@translate}</label>
+      </td>
+      <td>
+        @ <input type="text" id="twitter_via" name="twitter[via]" value="{$twitter.via}"/>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div> {* <!-- twitter --> *}
+
+<div class="socialbutt"> {* <!-- google --> *}
+<table>
+  <thead>
+    <tr><td colspan="2">
+      <label title="{if $google.enabled}{'Disable'|@translate}{else}{'Enable'|@translate}{/if}">
+        <img {if not $google.enabled}class="grayscale"{/if} src="{$SOCIALBUTT_PATH}template/images/google_logo.png"/>
+        <input class="enable" style="display:none;" type="checkbox" name="google[enabled]" {if $google.enabled}checked="checked"{/if}/>
+      </label>
+    </td></tr>
+  </thead>
+  <tbody {if not $google.enabled}style="display:none;"{/if}>
+    <tr class="property">
+      <td>
+        {'Button type'|@translate}
+      </td>
+      <td></td>
+    </tr>
+    <tr class="button">
+      <td><label>
+        15px
+        <img src="{$SOCIALBUTT_PATH}template/images/google_small.png"/>
+        <input type="radio" name="google[size]" value="small" {if $google.size=='small'}checked="checked"{/if}/>
+      </label></td>
+      <td><label>
+        <input type="radio" name="google[size]" value="medium" {if $google.size=='medium'}checked="checked"{/if}/>
+        <img src="{$SOCIALBUTT_PATH}template/images/google_medium.png"/>
+        20px
+      </label></td>
+    </tr>
+    <tr class="button">
+      <td><label>
+        24px
+        <img src="{$SOCIALBUTT_PATH}template/images/google_standard.png"/>
+        <input type="radio" name="google[size]" value="standard" {if $google.size=='standard'}checked="checked"{/if}/>
+      </label></td>
+      <td><label>
+        <input type="radio" name="google[size]" value="tall" {if $google.size=='tall'}checked="checked"{/if}/>
+        <img src="{$SOCIALBUTT_PATH}template/images/google_tall.png"/>
+        60px
+      </label></td>
+    </tr>
+    <tr class="property">
+      <td>
+        {'Annotation'|@translate}
+      </td>
+      <td>
+        <label><input type="radio" name="google[annotation]" value="none" {if $google.annotation=='none'}checked="checked"{/if}/> {'None'|@translate}</label><br>
+        <label><input type="radio" name="google[annotation]" value="bubble" {if $google.annotation=='bubble'}checked="checked"{/if}/> {'Bubble'|@translate}</label><br>
+        <label><input type="radio" name="google[annotation]" value="inline" {if $google.annotation=='inline'}checked="checked"{/if}/> {'Inline text'|@translate}</label>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div> {* <!-- google --> *}
+
+<br>
+
+<div class="socialbutt"> {* <!-- pinterest --> *}
+<table>
+  <thead>
+    <tr><td colspan="2">
+      <label title="{if $pinterest.enabled}{'Disable'|@translate}{else}{'Enable'|@translate}{/if}">
+        <img {if not $pinterest.enabled}class="grayscale"{/if} src="{$SOCIALBUTT_PATH}template/images/pinterest_logo.png"/>
+        <input class="enable" style="display:none;" type="checkbox" name="pinterest[enabled]" {if $pinterest.enabled}checked="checked"{/if}/>
+      </label>
+    </td></tr>
+  </thead>
+  <tbody {if not $pinterest.enabled}style="display:none;"{/if}>
+    <tr class="property">
+      <td>
+        {'Shared picture size'|@translate}
+      </td>
+      <td>
+        {html_options name="pinterest[img_size]" values=$img_sizes output=$img_sizes|translate selected=$pinterest.img_size}
+      </td>
+    </tr>
+    <tr class="property">
+      <td>
+        {'Annotation'|@translate}
+      </td>
+      <td>
+        <label><input type="radio" name="pinterest[layout]" value="none" {if $pinterest.layout=='none'}checked="checked"{/if}/> {'None'|@translate}</label><br>
+        <label><input type="radio" name="pinterest[layout]" value="horizontal" {if $pinterest.layout=='horizontal'}checked="checked"{/if}/> {'Right bubble'|@translate}</label><br>
+        <label><input type="radio" name="pinterest[layout]" value="vertical" {if $pinterest.layout=='vertical'}checked="checked"{/if}/> {'Top bubble'|@translate}</label>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div> {* <!-- pinterest --> *}
+
+<div class="socialbutt"> {* <!-- facebook --> *}
+<table>
+  <thead>
+    <tr><td colspan="2">
+      <label title="{if $facebook.enabled}{'Disable'|@translate}{else}{'Enable'|@translate}{/if}">
+        <img {if not $facebook.enabled}class="grayscale"{/if} src="{$SOCIALBUTT_PATH}template/images/facebook_logo.png"/>
+        <input class="enable" style="display:none;" type="checkbox" name="facebook[enabled]" {if $facebook.enabled}checked="checked"{/if}/>
+      </label>
+    </td></tr>
+  </thead>
+  <tbody {if not $facebook.enabled}style="display:none;"{/if}>
+    <tr class="property">
+      <td>
+        {'Button type'|@translate}
+      </td>
+      <td></td>
+    </tr>
+    <tr class="button">
+      <td><label>
+        <img src="{$SOCIALBUTT_PATH}template/images/facebook_light.png"/>
+        <input type="radio" name="facebook[color]" value="light" {if $facebook.color=='light'}checked="checked"{/if}/>
+      </label></td>
+      <td><label>
+        <input type="radio" name="facebook[color]" value="dark" {if $facebook.color=='dark'}checked="checked"{/if}/>
+        <img src="{$SOCIALBUTT_PATH}template/images/facebook_dark.png"/>
+      </label></td>
+    </tr>
+    <tr class="property">
+      <td>
+        {'Annotation'|@translate}
+      </td>
+      <td>
+        <label><input type="radio" name="facebook[layout]" value="none" {if $facebook.layout=='none'}checked="checked"{/if}/> {'None'|@translate}</label><br>
+        <label><input type="radio" name="facebook[layout]" value="button_count" {if $facebook.layout=='button_count'}checked="checked"{/if}/> {'Right bubble'|@translate}</label><br>
+        <label><input type="radio" name="facebook[layout]" value="box_count" {if $facebook.layout=='box_count'}checked="checked"{/if}/> {'Top bubble'|@translate}</label><br>
+        <label><input type="radio" name="facebook[layout]" value="standard" {if $facebook.layout=='standard'}checked="checked"{/if}/> {'Inline text'|@translate}</label>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div> {* <!-- facebook --> *}
+
+<br>
+
+<div class="socialbutt"> {* <!-- tumblr --> *}
 <table>
   <thead>
     <tr><td colspan="2">
@@ -116,155 +301,7 @@ jQuery("input.enable").change(function() {
     </tr>
   </tbody>
 </table>
-</div>
-
-<div class="socialbutt">
-<table>
-  <thead>
-    <tr><td colspan="2">
-      <label title="{if $google.enabled}{'Disable'|@translate}{else}{'Enable'|@translate}{/if}">
-        <img {if not $google.enabled}class="grayscale"{/if} src="{$SOCIALBUTT_PATH}template/images/google_logo.png"/>
-        <input class="enable" style="display:none;" type="checkbox" name="google[enabled]" {if $google.enabled}checked="checked"{/if}/>
-      </label>
-    </td></tr>
-  </thead>
-  <tbody {if not $google.enabled}style="display:none;"{/if}>
-    <tr class="property">
-      <td>
-        {'Button type'|@translate}
-      </td>
-      <td></td>
-    </tr>
-    <tr class="button">
-      <td><label>
-        15px
-        <img src="{$SOCIALBUTT_PATH}template/images/google_small.png"/>
-        <input type="radio" name="google[size]" value="small" {if $google.size=='small'}checked="checked"{/if}/>
-      </label></td>
-      <td><label>
-        <input type="radio" name="google[size]" value="medium" {if $google.size=='medium'}checked="checked"{/if}/>
-        <img src="{$SOCIALBUTT_PATH}template/images/google_medium.png"/>
-        20px
-      </label></td>
-    </tr>
-    <tr class="button">
-      <td><label>
-        24px
-        <img src="{$SOCIALBUTT_PATH}template/images/google_standard.png"/>
-        <input type="radio" name="google[size]" value="standard" {if $google.size=='standard'}checked="checked"{/if}/>
-      </label></td>
-      <td><label>
-        <input type="radio" name="google[size]" value="tall" {if $google.size=='tall'}checked="checked"{/if}/>
-        <img src="{$SOCIALBUTT_PATH}template/images/google_tall.png"/>
-        60px
-      </label></td>
-    </tr>
-    <tr class="property">
-      <td>
-        {'Annotation'|@translate}
-      </td>
-      <td>
-        <label><input type="radio" name="google[annotation]" value="none" {if $google.annotation=='none'}checked="checked"{/if}/> {'None'|@translate}</label><br>
-        <label><input type="radio" name="google[annotation]" value="bubble" {if $google.annotation=='bubble'}checked="checked"{/if}/> {'Bubble'|@translate}</label><br>
-        <label><input type="radio" name="google[annotation]" value="inline" {if $google.annotation=='inline'}checked="checked"{/if}/> {'Inline text'|@translate}</label>
-      </td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-<br>
-
-<div class="socialbutt">
-<table>
-  <thead>
-    <tr><td colspan="2">
-      <label title="{if $twitter.enabled}{'Disable'|@translate}{else}{'Enable'|@translate}{/if}">
-        <img {if not $twitter.enabled}class="grayscale"{/if} src="{$SOCIALBUTT_PATH}template/images/twitter_logo.png"/>
-        <input class="enable" style="display:none;" type="checkbox" name="twitter[enabled]" {if $twitter.enabled}checked="checked"{/if}/>
-      </label>
-    </td></tr>
-  </thead>
-  <tbody {if not $twitter.enabled}style="display:none;"{/if}>
-    <tr class="property">
-      <td>
-        {'Button type'|@translate}
-      </td>
-      <td></td>
-    </tr>
-    <tr class="button">
-      <td><label>
-        20px
-        <img src="{$SOCIALBUTT_PATH}template/images/twitter_small.png"/>
-        <input type="radio" name="twitter[size]" value="small" {if $twitter.size=='small'}checked="checked"{/if}/>
-      </label></td>
-      <td><label>
-        <input type="radio" name="twitter[size]" value="large" {if $twitter.size=='large'}checked="checked"{/if}/>
-        <img src="{$SOCIALBUTT_PATH}template/images/twitter_large.png"/>
-        28px
-      </label></td>
-    </tr>
-    <tr class="property">
-      <td>
-        {'Annotation'|@translate}
-      </td>
-      <td>
-        <label><input type="radio" name="twitter[count]" value="none" {if $twitter.count=='none'}checked="checked"{/if}/> {'None'|@translate}</label><br>
-        <label><input type="radio" name="twitter[count]" value="bubble" {if $twitter.count=='bubble'}checked="checked"{/if}/> {'Bubble'|@translate}</label><br>
-      </td>
-    </tr>
-    <tr class="property">
-      <td>
-        <label for="twitter_via">{'Via'|@translate}</label>
-      </td>
-      <td>
-        @ <input type="text" id="twitter_via" name="twitter[via]" value="{$twitter.via}"/>
-      </td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-<div class="socialbutt">
-<table>
-  <thead>
-    <tr><td colspan="2">
-      <label title="{if $facebook.enabled}{'Disable'|@translate}{else}{'Enable'|@translate}{/if}">
-        <img {if not $facebook.enabled}class="grayscale"{/if} src="{$SOCIALBUTT_PATH}template/images/facebook_logo.png"/>
-        <input class="enable" style="display:none;" type="checkbox" name="facebook[enabled]" {if $facebook.enabled}checked="checked"{/if}/>
-      </label>
-    </td></tr>
-  </thead>
-  <tbody {if not $facebook.enabled}style="display:none;"{/if}>
-    <tr class="property">
-      <td>
-        {'Button type'|@translate}
-      </td>
-      <td></td>
-    </tr>
-    <tr class="button">
-      <td><label>
-        <img src="{$SOCIALBUTT_PATH}template/images/facebook_light.png"/>
-        <input type="radio" name="facebook[color]" value="light" {if $facebook.color=='light'}checked="checked"{/if}/>
-      </label></td>
-      <td><label>
-        <input type="radio" name="facebook[color]" value="dark" {if $facebook.color=='dark'}checked="checked"{/if}/>
-        <img src="{$SOCIALBUTT_PATH}template/images/facebook_dark.png"/>
-      </label></td>
-    </tr>
-    <tr class="property">
-      <td>
-        {'Annotation'|@translate}
-      </td>
-      <td>
-        <label><input type="radio" name="facebook[layout]" value="button_count" {if $facebook.layout=='button_count'}checked="checked"{/if}/> {'Right bubble'|@translate}</label><br>
-        <label><input type="radio" name="facebook[layout]" value="box_count" {if $facebook.layout=='box_count'}checked="checked"{/if}/> {'Top bubble'|@translate}</label><br>
-        <label><input type="radio" name="facebook[layout]" value="standard" {if $facebook.layout=='standard'}checked="checked"{/if}/> {'Inline text'|@translate}</label>
-      </td>
-    </tr>
-  </tbody>
-</table>
-</div>
+</div> {* <!-- tumblr --> *}
 
 <br>
 

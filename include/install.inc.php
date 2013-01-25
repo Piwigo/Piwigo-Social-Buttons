@@ -30,6 +30,11 @@ function socialbutt_install()
         'color' => 'light',
         'layout' => 'button_count',
         ),
+      'pinterest' => array(
+        'enabled' => true,
+        'layout' => 'horizontal',
+        'img_size' => 'Original',
+        ),
       );
     
     if (isset($conf['TumblrShare']))
@@ -52,9 +57,22 @@ function socialbutt_install()
       $default_config['google']['annotation'] = $temp['annotation'];
     }
     
-    
     $conf['SocialButtons'] = serialize($default_config);
     conf_update_param('SocialButtons', $conf['SocialButtons']);
+  }
+  else
+  {
+    $new_conf = unserialize($conf['SocialButtons']);
+    if (empty($new_conf['pinterest']))
+    {
+      $new_conf['pinterest'] = array(
+        'enabled' => true,
+        'layout' => 'horizontal',
+        'img_size' => 'Original',
+        );
+      $conf['SocialButtons'] = serialize($new_conf);
+      conf_update_param('SocialButtons', $conf['SocialButtons']);
+    }
   }
 }
 

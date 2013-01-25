@@ -124,22 +124,27 @@ function socialbutt_add_button()
   if ($conf['SocialButtons']['google']['enabled'])
   {
     include_once(SOCIALBUTT_PATH . 'include/google.inc.php');
-    $buttons[] = socialbutt_google($basename, $root_url, $tpl_vars);
+    socialbutt_google($basename, $root_url, $tpl_vars, $buttons);
   }
   if ($conf['SocialButtons']['twitter']['enabled'])
   {
     include_once(SOCIALBUTT_PATH . 'include/twitter.inc.php');
-    $buttons[] = socialbutt_twitter($basename, $root_url, $tpl_vars);
+    socialbutt_twitter($basename, $root_url, $tpl_vars, $buttons);
   }
   if ($conf['SocialButtons']['facebook']['enabled'])
   {
     include_once(SOCIALBUTT_PATH . 'include/facebook.inc.php');
-    $buttons[] = socialbutt_facebook($basename, $root_url, $tpl_vars);
+    socialbutt_facebook($basename, $root_url, $tpl_vars, $buttons);
   }
   if ($conf['SocialButtons']['tumblr']['enabled'])
   {
     include_once(SOCIALBUTT_PATH . 'include/tumblr.inc.php');
-    $buttons[] = socialbutt_tumblr($basename, $root_url, $tpl_vars);
+    socialbutt_tumblr($basename, $root_url, $tpl_vars, $buttons);
+  }
+  if ($conf['SocialButtons']['pinterest']['enabled'] and $basename=='picture')
+  {
+    include_once(SOCIALBUTT_PATH . 'include/pinterest.inc.php');
+    socialbutt_pinterest($basename, $root_url, $tpl_vars, $buttons);
   }
   
   if (empty($buttons))
