@@ -1,7 +1,7 @@
 {combine_css path=$SOCIALBUTT_PATH|@cat:"template/style.css"}
 
 {html_style}{literal}
-img.grayscale {
+.socialbutt.disabled thead img {
   filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='saturate' values='0'/></filter></svg>#grayscale"); /* Firefox 10+ */
   filter: gray; /* IE6-9 */
   -webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
@@ -10,16 +10,16 @@ img.grayscale {
 
 {footer_script}{literal}
 jQuery("input.enable").change(function() {
-  $parent = $(this).closest("table");
+  $parent = $(this).closest("div.socialbutt");
   if (!$(this).is(":checked")) {
     $parent.find("thead label").attr("title", "{/literal}{'Enable'|@translate|escape:javascript}{literal}");
-    $parent.find("thead img").addClass('grayscale');
-    $parent.find("tbody").hide();
+    $parent.addClass('disabled');
+    $parent.removeClass('enabled');
   }
   else {
     $parent.find("thead label").attr("title", "{/literal}{'Disable'|@translate|escape:javascript}{literal}");
-    $parent.find("thead img").removeClass('grayscale');
-    $parent.find("tbody").show();
+    $parent.addClass('enabled');
+    $parent.removeClass('disabled');
   }
 });
 {/literal}{/footer_script}
@@ -50,17 +50,17 @@ jQuery("input.enable").change(function() {
 <br>
 
 
-<div class="socialbutt"> {* <!-- twitter --> *}
+<div class="socialbutt {if not $twitter.enabled}disabled{else}enabled{/if}"> {* <!-- twitter --> *}
 <table>
   <thead>
     <tr><td colspan="2">
       <label title="{if $twitter.enabled}{'Disable'|@translate}{else}{'Enable'|@translate}{/if}">
-        <img {if not $twitter.enabled}class="grayscale"{/if} src="{$SOCIALBUTT_PATH}template/images/twitter_logo.png"/>
+        <img src="{$SOCIALBUTT_PATH}template/images/twitter_logo.png"/>
         <input class="enable" style="display:none;" type="checkbox" name="twitter[enabled]" {if $twitter.enabled}checked="checked"{/if}/>
       </label>
     </td></tr>
   </thead>
-  <tbody {if not $twitter.enabled}style="display:none;"{/if}>
+  <tbody>
     <tr class="property">
       <td>
         {'Button type'|@translate}
@@ -69,14 +69,12 @@ jQuery("input.enable").change(function() {
     </tr>
     <tr class="button">
       <td><label>
-        20px
         <img src="{$SOCIALBUTT_PATH}template/images/twitter_small.png"/>
         <input type="radio" name="twitter[size]" value="small" {if $twitter.size=='small'}checked="checked"{/if}/>
       </label></td>
       <td><label>
         <input type="radio" name="twitter[size]" value="large" {if $twitter.size=='large'}checked="checked"{/if}/>
         <img src="{$SOCIALBUTT_PATH}template/images/twitter_large.png"/>
-        28px
       </label></td>
     </tr>
     <tr class="property">
@@ -100,17 +98,17 @@ jQuery("input.enable").change(function() {
 </table>
 </div> {* <!-- twitter --> *}
 
-<div class="socialbutt"> {* <!-- google --> *}
+<div class="socialbutt {if not $google.enabled}disabled{else}enabled{/if}"> {* <!-- google --> *}
 <table>
   <thead>
     <tr><td colspan="2">
       <label title="{if $google.enabled}{'Disable'|@translate}{else}{'Enable'|@translate}{/if}">
-        <img {if not $google.enabled}class="grayscale"{/if} src="{$SOCIALBUTT_PATH}template/images/google_logo.png"/>
+        <img src="{$SOCIALBUTT_PATH}template/images/google_logo.png"/>
         <input class="enable" style="display:none;" type="checkbox" name="google[enabled]" {if $google.enabled}checked="checked"{/if}/>
       </label>
     </td></tr>
   </thead>
-  <tbody {if not $google.enabled}style="display:none;"{/if}>
+  <tbody>
     <tr class="property">
       <td>
         {'Button type'|@translate}
@@ -119,26 +117,22 @@ jQuery("input.enable").change(function() {
     </tr>
     <tr class="button">
       <td><label>
-        15px
         <img src="{$SOCIALBUTT_PATH}template/images/google_small.png"/>
         <input type="radio" name="google[size]" value="small" {if $google.size=='small'}checked="checked"{/if}/>
       </label></td>
       <td><label>
         <input type="radio" name="google[size]" value="medium" {if $google.size=='medium'}checked="checked"{/if}/>
         <img src="{$SOCIALBUTT_PATH}template/images/google_medium.png"/>
-        20px
       </label></td>
     </tr>
     <tr class="button">
       <td><label>
-        24px
         <img src="{$SOCIALBUTT_PATH}template/images/google_standard.png"/>
         <input type="radio" name="google[size]" value="standard" {if $google.size=='standard'}checked="checked"{/if}/>
       </label></td>
       <td><label>
         <input type="radio" name="google[size]" value="tall" {if $google.size=='tall'}checked="checked"{/if}/>
         <img src="{$SOCIALBUTT_PATH}template/images/google_tall.png"/>
-        60px
       </label></td>
     </tr>
     <tr class="property">
@@ -157,17 +151,17 @@ jQuery("input.enable").change(function() {
 
 <br>
 
-<div class="socialbutt"> {* <!-- pinterest --> *}
+<div class="socialbutt {if not $pinterest.enabled}disabled{else}enabled{/if}"> {* <!-- pinterest --> *}
 <table>
   <thead>
     <tr><td colspan="2">
       <label title="{if $pinterest.enabled}{'Disable'|@translate}{else}{'Enable'|@translate}{/if}">
-        <img {if not $pinterest.enabled}class="grayscale"{/if} src="{$SOCIALBUTT_PATH}template/images/pinterest_logo.png"/>
+        <img src="{$SOCIALBUTT_PATH}template/images/pinterest_logo.png"/>
         <input class="enable" style="display:none;" type="checkbox" name="pinterest[enabled]" {if $pinterest.enabled}checked="checked"{/if}/>
       </label>
     </td></tr>
   </thead>
-  <tbody {if not $pinterest.enabled}style="display:none;"{/if}>
+  <tbody>
     <tr class="property">
       <td>
         {'Shared picture size'|@translate}
@@ -190,17 +184,17 @@ jQuery("input.enable").change(function() {
 </table>
 </div> {* <!-- pinterest --> *}
 
-<div class="socialbutt"> {* <!-- facebook --> *}
+<div class="socialbutt {if not $facebook.enabled}disabled{else}enabled{/if}"> {* <!-- facebook --> *}
 <table>
   <thead>
     <tr><td colspan="2">
       <label title="{if $facebook.enabled}{'Disable'|@translate}{else}{'Enable'|@translate}{/if}">
-        <img {if not $facebook.enabled}class="grayscale"{/if} src="{$SOCIALBUTT_PATH}template/images/facebook_logo.png"/>
+        <img src="{$SOCIALBUTT_PATH}template/images/facebook_logo.png"/>
         <input class="enable" style="display:none;" type="checkbox" name="facebook[enabled]" {if $facebook.enabled}checked="checked"{/if}/>
       </label>
     </td></tr>
   </thead>
-  <tbody {if not $facebook.enabled}style="display:none;"{/if}>
+  <tbody>
     <tr class="property">
       <td>
         {'Button type'|@translate}
@@ -234,17 +228,17 @@ jQuery("input.enable").change(function() {
 
 <br>
 
-<div class="socialbutt"> {* <!-- tumblr --> *}
+<div class="socialbutt {if not $tumblr.enabled}disabled{else}enabled{/if}"> {* <!-- tumblr --> *}
 <table>
   <thead>
     <tr><td colspan="2">
       <label title="{if $tumblr.enabled}{'Disable'|@translate}{else}{'Enable'|@translate}{/if}">
-        <img {if not $tumblr.enabled}class="grayscale"{/if} src="{$SOCIALBUTT_PATH}template/images/tumblr_logo.png"/>
+        <img src="{$SOCIALBUTT_PATH}template/images/tumblr_logo.png"/>
         <input class="enable" style="display:none;" type="checkbox" name="tumblr[enabled]" {if $tumblr.enabled}checked="checked"{/if}/>
       </label>
     </td></tr>
   </thead>
-  <tbody {if not $tumblr.enabled}style="display:none;"{/if}>
+  <tbody>
     <tr class="property">
       <td>
         {'Button type'|@translate}

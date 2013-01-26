@@ -1,15 +1,20 @@
 .socialbutt {
   display:inline-block;
+  position:relative;
   vertical-align:top;
-  margin:10px;
+  margin:8px;
   width:500px;
-  border:10px solid #f9f9f9;
+  border:8px solid #f9f9f9;
   border-radius:10px;
   box-shadow:0 0 5px rgba(0,0,0,0.2);
 }
 .socialbutt table {
   border-spacing: 0px;
   width:100%;
+}
+
+.socialbutt.disabled table tbody {
+  display:none;
 }
 
 .socialbutt td {
@@ -25,6 +30,10 @@
 }
 .socialbutt thead td {
   border-top:none;
+}
+.socialbutt thead label {
+  display:block;
+  width:100%;
 }
 .socialbutt tr td:last-child {
   border-right:none;
@@ -92,4 +101,18 @@
 .submit input:hover {
   box-shadow: 0 0 5px #2288CC;
   border-color: #3399DD #3399DD #2288CC;
+}
+
+.socialbutt thead label:before {
+  position:absolute;
+  top:15px;
+  left:10px;
+  font-size:22px;
+  color:#000;
+}
+.socialbutt.disabled thead label:before {
+  content:"\2610";
+}
+.socialbutt.enabled thead label:before {
+  content:"\2611";
 }
