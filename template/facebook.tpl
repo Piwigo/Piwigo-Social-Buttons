@@ -1,10 +1,10 @@
 {strip}
 {footer_script}jQuery('body').prepend('<div id="fb-root"></div>');{/footer_script}
-{combine_script id='facebook_jssdk' load='async' path='https://connect.facebook.net/'|cat:$SOCIALBUTT.FACEBOOK.lang|cat:'/all.js#xfbml=1'}
+{combine_script id='facebook_jssdk' load='footer' path='https://connect.facebook.net/'|cat:$SOCIALBUTT.FACEBOOK.lang|cat:'/all.js#xfbml=1'}
 
 {if $SOCIALBUTT.FACEBOOK.layout=='none'}
 {html_style}{literal}
-.fb-like span { height: 22px !important; overflow: hidden; margin-right:10px; }
+.fb-like span { height: 22px !important; overflow: hidden !important; margin-right:10px; }
 .fb-like iframe { top: -41px; }
 {/literal}{/html_style}
 {assign var=facebook_layout value='box_count'}

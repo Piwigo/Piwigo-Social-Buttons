@@ -5,22 +5,8 @@ function socialbutt_tumblr($basename, $root_url, &$tpl_vars, &$buttons)
 {
   global $conf, $template;
   
-  $tumblr_css = array(
-    'share_1' => 'width:81px; height:20px;',
-    'share_2' => 'width:61px; height:20px;',
-    'share_3' => 'width:129px; height:20px;',
-    'share_4' => 'width:20px; height:20px;',
-    'share_1T' => 'width:81px; height:20px;',
-    'share_2T' => 'width:61px; height:20px;',
-    'share_3T' => 'width:129px; height:20px;',
-    'share_4T' => 'width:20px; height:20px;',
-    );
-  
-  
   // config
   $tpl_vars['TUMBLR'] = $conf['SocialButtons']['tumblr'];
-  $tpl_vars['TUMBLR']['css'] = $tumblr_css[ $conf['SocialButtons']['tumblr']['type'] ];
-  $tpl_vars['TUMBLR']['copyright'] = ' (from <a href="'.$root_url.'">'.$conf['gallery_title'].'</a>)';
   
   // button on piture page
   if ($basename == 'picture')

@@ -13,7 +13,6 @@ function socialbutt_pinterest($basename, $root_url, &$tpl_vars, &$buttons)
   
   // config
   $tpl_vars['PINTEREST'] = $conf['SocialButtons']['pinterest'];
-  $tpl_vars['PINTEREST']['copyright'] = ' (from <a href="'.$root_url.'">'.$conf['gallery_title'].'</a>)';
   $tpl_vars['PINTEREST']['title'] = $picture['current']['TITLE'];
   
   if ($conf['SocialButtons']['pinterest']['img_size'] == 'Original')

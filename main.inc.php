@@ -117,6 +117,7 @@ function socialbutt_add_button()
   $tpl_vars = array(
     'share_url' => $share_url,
     'position' => $conf['SocialButtons']['position'],
+    'copyright' => ' (from <a href="'.$root_url.'">'.$conf['gallery_title'].'</a>)',
     );
   $buttons = array();
   
@@ -153,7 +154,10 @@ function socialbutt_add_button()
   }
   
   
-  $template->assign('SOCIALBUTT', $tpl_vars);
+  $template->assign(array(
+    'SOCIALBUTT' => $tpl_vars,
+    'SOCIALBUTT_PATH' => SOCIALBUTT_PATH,
+    ));
   
   // parse buttons
   foreach ($buttons as &$button)
