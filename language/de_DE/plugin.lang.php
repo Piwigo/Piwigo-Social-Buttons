@@ -29,4 +29,7 @@ $lang['Bubble'] = 'Blase';
 $lang['Inline text'] = 'eingebetteter Text';
 $lang['Shared picture size'] = 'gezeigte Bilder Größe';
 $lang['Via'] = 'via';
+$lang['Button type'] = 'Art des Buttons';
+$lang['Right bubble'] = 'Rechte Blase';
+$lang['Top bubble'] = 'Blase oben';
 ?>
