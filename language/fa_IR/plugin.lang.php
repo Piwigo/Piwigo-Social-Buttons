@@ -23,8 +23,11 @@
 $lang['Annotation'] = 'یادداشت';
 $lang['Bottom'] = 'زیر';
 $lang['Bubble'] = 'حباب';
-$lang['Button position on picture page'] = 'موقعیت دکمه در صفحه ی عکس ها';
-$lang['Inline text'] = 'متن کنار دکمه';
-$lang['Toolbar'] = 'تولبار';
+$lang['Button position on picture page'] = 'موقعیت دکمه در برگه‌ی عکس‌ها';
+$lang['Inline text'] = 'نوشته‌ی درون خطی';
+$lang['Toolbar'] = 'نوار ابزار';
 $lang['Top'] = 'بالا';
+$lang['Button type'] = 'نوع دکمه';
+$lang['Right bubble'] = 'حباب راست';
+$lang['Top bubble'] = 'حباب بالا';
 ?>
