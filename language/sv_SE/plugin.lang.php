@@ -21,11 +21,14 @@
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
 $lang['Bottom'] = 'Nedre';
-$lang['Button position on picture page'] = 'Knapp position på bildsidan';
+$lang['Button position on picture page'] = 'Knapposition på bildsidan';
 $lang['Toolbar'] = 'Verktygsfält';
 $lang['Top'] = 'Topp';
 $lang['Annotation'] = 'Not';
 $lang['Bubble'] = 'Bubbla';
 $lang['Inline text'] = 'Inline text';
 $lang['Via'] = 'Via';
+$lang['Button type'] = 'Knapptyp';
+$lang['Right bubble'] = 'Höger bubbla';
+$lang['Top bubble'] = 'Toppbubbla';
 ?>
