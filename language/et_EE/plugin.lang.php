@@ -29,4 +29,7 @@ $lang['Toolbar'] = 'Tööriistariba';
 $lang['Top'] = 'Ülemine osa';
 $lang['Shared picture size'] = 'Jagatava pildi suurus';
 $lang['Via'] = 'Kaudu';
+$lang['Button type'] = 'Nupu tüüp';
+$lang['Right bubble'] = 'Parempoolne mull';
+$lang['Top bubble'] = 'Ülemine mull';
 ?>
