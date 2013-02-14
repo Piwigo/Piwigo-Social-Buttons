@@ -8,4 +8,7 @@ $lang['Annotation'] = 'Anotace';
 $lang['Bubble'] = 'Bublina';
 $lang['Inline text'] = 'Text v řádce';
 $lang['Via'] = 'Prostřednictvím';
+$lang['Button type'] = 'Typ tlačítka';
+$lang['Right bubble'] = 'Pravá bublina';
+$lang['Top bubble'] = 'Horní bublina';
 ?>
