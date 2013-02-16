@@ -29,4 +29,7 @@ $lang['Top'] = 'Yläosa';
 $lang['Inline text'] = 'Upotettu teksti';
 $lang['Shared picture size'] = 'Jaetun kuvan koko';
 $lang['Via'] = 'Käyttäjältä';
+$lang['Button type'] = 'Painikkeen tyyppi';
+$lang['Right bubble'] = 'Oikeanpuoleinen kupla';
+$lang['Top bubble'] = 'yläkupla';
 ?>
