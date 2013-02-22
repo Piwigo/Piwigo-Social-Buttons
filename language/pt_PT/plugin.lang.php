@@ -29,4 +29,7 @@ $lang['Bubble'] = 'Bolha';
 $lang['Inline text'] = 'Texto embutido';
 $lang['Shared picture size'] = 'Tamanho da foto partilhado';
 $lang['Via'] = 'Via';
+$lang['Button type'] = 'Tipo de botão';
+$lang['Right bubble'] = 'Bolha direita';
+$lang['Top bubble'] = 'Bolha superior';
 ?>
