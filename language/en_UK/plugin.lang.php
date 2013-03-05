@@ -10,6 +10,6 @@ $lang['Button type'] = 'Button type';
 $lang['Right bubble'] = 'Right bubble';
 $lang['Top bubble'] = 'Top bubble';
 $lang['Display buttons'] = 'Display buttons';
-$lang['on photo and album pages'] = 'on photo and album pages';
-$lang['only on photo pages'] = 'only on photo pages';
+$lang['on photo and album'] = 'on photo and album';
+$lang['only on photo'] = 'only on photo';
 ?>
