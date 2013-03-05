@@ -102,7 +102,7 @@ function socialbutt_add_button()
   {
     $share_url = $root_url.ltrim(duplicate_picture_url(), './');
   }
-  else if ($basename == 'index')
+  else if ($basename == 'index' and $conf['SocialButtons']['on_index'])
   {
     $conf['SocialButtons']['position'] = 'index';
     $share_url = $root_url.ltrim(duplicate_index_url(array(), array('start')), './');
@@ -117,7 +117,7 @@ function socialbutt_add_button()
   $tpl_vars = array(
     'share_url' => $share_url,
     'position' => $conf['SocialButtons']['position'],
-    'copyright' => ' (from <a href="'.$root_url.'">'.$conf['gallery_title'].'</a>)',
+    'copyright' => ' (from <a href="'.$share_url.'">'.$conf['gallery_title'].'</a>)',
     );
   $buttons = array();
   
@@ -170,14 +170,12 @@ function socialbutt_add_button()
   {
     case 'index':
       foreach ($buttons as $button) {
-        // $template->add_index_button('<li>'.$button.'</li>', 100);
-        $template->concat('PLUGIN_INDEX_ACTIONS', "\n<li>".$button."</li>");
+        $template->add_index_button('<li>'.$button.'</li>', 100);
       }
       break;
     case 'toolbar':
       foreach ($buttons as $button) {
-        // $template->add_picture_button($button, 100);
-        $template->concat('PLUGIN_PICTURE_ACTIONS', "\n".$button);
+        $template->add_picture_button($button, 100);
       }
       break;
     default;
@@ -192,12 +190,12 @@ function socialbutt_add_button_prefilter($content)
   {
     case 'top':
       $search = '<div id="theImage">';
-      $add = '<div>{foreach from=$SOCIALBUTT_BUTTONS item=BUTTON}{$BUTTON}{/foreach}</div>';
+      $add = '<div>{foreach from=$SOCIALBUTT_BUTTONS item=BUTTON}{$BUTTON} {/foreach}</div>';
       break;
       
     case 'bottom':
       $search = '{$ELEMENT_CONTENT}';
-      $add = '<div>{foreach from=$SOCIALBUTT_BUTTONS item=BUTTON}{$BUTTON}{/foreach}</div>';
+      $add = '<div>{foreach from=$SOCIALBUTT_BUTTONS item=BUTTON}{$BUTTON} {/foreach}</div>';
       break;
   }
 

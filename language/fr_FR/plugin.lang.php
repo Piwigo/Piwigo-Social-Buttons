@@ -11,4 +11,7 @@ $lang['Shared picture size'] = 'Taille des photos partagées';
 $lang['Via'] = 'Via';
 $lang['Right bubble'] = 'Bulle à droite';
 $lang['Top bubble'] = 'Bulle en haut';
+$lang['Display buttons'] = 'Afficher les boutons';
+$lang['on photo and album'] = 'sur les photos et les albums';
+$lang['only on photo'] = 'uniquement sur les photos';
 ?>

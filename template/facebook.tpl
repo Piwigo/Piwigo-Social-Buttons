@@ -4,7 +4,7 @@
 
 {if $SOCIALBUTT.FACEBOOK.layout=='none'}
 {html_style}{literal}
-.fb-like span { height: 22px !important; overflow: hidden !important; margin-right:10px; }
+.fb-like span { height: 22px !important; overflow: hidden !important; }
 .fb-like iframe { top: -41px; }
 {/literal}{/html_style}
 {assign var=facebook_layout value='box_count'}

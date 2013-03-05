@@ -44,6 +44,15 @@ jQuery("input.enable").change(function() {
       <label><input type="radio" name="position" value="toolbar" {if $position=='toolbar'}checked="checked"{/if}/> {'Toolbar'|@translate}</label>
     </td>
   </tr>
+  <tr class="property">
+    <td>
+      {'Display buttons'|@translate}
+    </td>
+    <td>
+      <label><input type="radio" name="on_index" value="true" {if $on_index}checked="checked"{/if}/> {'on photo and album'|@translate}</label><br>
+      <label><input type="radio" name="on_index" value="false" {if not $on_index}checked="checked"{/if}/> {'only on photo'|@translate}</label>
+    </td>
+  </tr>
 </table>
 </div>
 

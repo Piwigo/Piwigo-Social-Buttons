@@ -9,6 +9,7 @@ function socialbutt_install()
   {
     $default_config = array(
       'position' => 'toolbar',
+      'on_index' => true,
       'twitter' => array(
         'enabled' => true,
         'size' => 'small',
@@ -63,6 +64,7 @@ function socialbutt_install()
   else
   {
     $new_conf = unserialize($conf['SocialButtons']);
+    
     if (empty($new_conf['pinterest']))
     {
       $new_conf['pinterest'] = array(
@@ -70,9 +72,14 @@ function socialbutt_install()
         'layout' => 'horizontal',
         'img_size' => 'Original',
         );
-      $conf['SocialButtons'] = serialize($new_conf);
-      conf_update_param('SocialButtons', $conf['SocialButtons']);
     }
+    if (!isset($new_conf['on_index']))
+    {
+      $new_conf['on_index'] = true;
+    }
+    
+    $conf['SocialButtons'] = serialize($new_conf);
+    conf_update_param('SocialButtons', $conf['SocialButtons']);
   }
 }
 

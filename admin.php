@@ -10,6 +10,7 @@ if (isset($_POST['submit']))
 {
   $conf['SocialButtons'] = array(
     'position' => $_POST['position'],
+    'on_index' => get_boolean($_POST['on_index']),
     'twitter' => array(
       'enabled' => isset($_POST['twitter']['enabled']),
       'size' => $_POST['twitter']['size'],
