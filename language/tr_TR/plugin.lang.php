@@ -11,4 +11,7 @@ $lang['Via'] = 'Üzerinden';
 $lang['Right bubble'] = 'Sağ baloncuk';
 $lang['Top bubble'] = 'Üst baloncuk';
 $lang['Button type'] = 'Buton tipi';
+$lang['Display buttons'] = 'Butonları göster';
+$lang['on photo and album'] = 'fotoğraf ve albümde';
+$lang['only on photo'] = 'sadece fotoğrafta';
 ?>
