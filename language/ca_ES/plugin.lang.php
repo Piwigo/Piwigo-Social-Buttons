@@ -32,4 +32,7 @@ $lang['Via'] = 'Via';
 $lang['Button type'] = 'Tipus de botó';
 $lang['Right bubble'] = 'Bombolla dreta';
 $lang['Top bubble'] = 'Bombolla superior';
+$lang['Display buttons'] = 'Mostra els botons';
+$lang['on photo and album'] = 'sobre la foto i l\'àlbum';
+$lang['only on photo'] = 'nomes sobre la foto';
 ?>
