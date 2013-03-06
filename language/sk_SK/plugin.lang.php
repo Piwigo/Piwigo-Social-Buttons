@@ -10,4 +10,7 @@ $lang['Via'] = 'Cez';
 $lang['Top bubble'] = 'Horná bublina';
 $lang['Right bubble'] = 'Pravá bublina';
 $lang['Button type'] = 'Typ tlačidla';
+$lang['only on photo'] = 'len na fotke';
+$lang['on photo and album'] = 'na fotke a albume';
+$lang['Display buttons'] = 'Zobraziť tlačidlá';
 ?>
