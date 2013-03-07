@@ -32,4 +32,7 @@ $lang['Via'] = '经由';
 $lang['Right bubble'] = '右边提示泡';
 $lang['Top bubble'] = '顶部提示泡';
 $lang['Button type'] = '按钮类型';
+$lang['Display buttons'] = '显示按钮';
+$lang['on photo and album'] = '在图片和相册';
+$lang['only on photo'] = '只在图片';
 ?>
