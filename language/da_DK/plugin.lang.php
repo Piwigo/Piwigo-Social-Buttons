@@ -32,4 +32,7 @@ $lang['Via'] = 'Via';
 $lang['Button type'] = 'Knaptype';
 $lang['Right bubble'] = 'Højre boble';
 $lang['Top bubble'] = 'Topboble';
+$lang['Display buttons'] = 'Vis knapper';
+$lang['on photo and album'] = 'på fotografi og album';
+$lang['only on photo'] = 'kun på fotografi';
 ?>
