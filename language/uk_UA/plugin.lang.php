@@ -30,4 +30,7 @@ $lang['Inline text'] = 'Вбудований текст';
 $lang['Right bubble'] = 'Права бульбашка';
 $lang['Top bubble'] = 'Верхня бульбашка';
 $lang['Button type'] = 'Тип кнопки';
+$lang['Display buttons'] = 'Відображати кнопки';
+$lang['on photo and album'] = 'на фото та альбомах';
+$lang['only on photo'] = 'тільки на фото';
 ?>
