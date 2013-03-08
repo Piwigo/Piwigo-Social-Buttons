@@ -11,4 +11,7 @@ $lang['Via'] = 'Via';
 $lang['Button type'] = 'Tipo di pulsante';
 $lang['Right bubble'] = 'Bolla destra';
 $lang['Top bubble'] = 'Bolla superiore';
+$lang['only on photo'] = 'solo su foto';
+$lang['on photo and album'] = 'su foto e album';
+$lang['Display buttons'] = 'Mostra pulsanti';
 ?>
