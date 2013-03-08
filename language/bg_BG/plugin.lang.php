@@ -30,4 +30,8 @@ $lang['Top'] = 'Горе';
 $lang['Top bubble'] = 'Отгоре разширен';
 $lang['Right bubble'] = 'Отдясно разширен';
 $lang['Button type'] = 'Вид на бутона';
+$lang['only on photo'] = 'само на снимка';
+$lang['on photo and album'] = '
+на снимката и албума';
+$lang['Display buttons'] = 'Покажи бутони';
 ?>
