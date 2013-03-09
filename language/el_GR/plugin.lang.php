@@ -28,6 +28,9 @@ $lang['Annotation'] = 'Σχόλιο';
 $lang['Bubble'] = 'Συννεφάκι';
 $lang['Inline text'] = 'Inline κείμενο';
 $lang['Right bubble'] = 'Συννεφάκι στα δεξιά';
-$lang['Top bubble'] = 'Συννεφάκι στην κορυφή';
+$lang['Top bubble'] = 'Συννεφάκι κορυφής';
 $lang['Button type'] = 'Τύπος Κουμπιού';
+$lang['only on photo'] = 'μόνο στις φωτογραφίες';
+$lang['on photo and album'] = 'στις φωτογραφίες και τα λευκώματα';
+$lang['Display buttons'] = 'Εμφάνιση κουμπιιών';
 ?>
