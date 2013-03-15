@@ -32,4 +32,7 @@ $lang['Via'] = 'Kaudu';
 $lang['Button type'] = 'Nupu tüüp';
 $lang['Right bubble'] = 'Parempoolne mull';
 $lang['Top bubble'] = 'Ülemine mull';
+$lang['Display buttons'] = 'Kuva nuppe';
+$lang['on photo and album'] = 'pildil ja albumil';
+$lang['only on photo'] = 'ainult pildil';
 ?>
