@@ -11,4 +11,7 @@ $lang['Via'] = 'Via';
 $lang['Button type'] = 'Knop model';
 $lang['Right bubble'] = 'Rechter bel';
 $lang['Top bubble'] = 'Bovenste bel';
+$lang['on photo and album'] = ' op foto en album';
+$lang['only on photo'] = ' alleen op de foto';
+$lang['Display buttons'] = 'Toon knoppen';
 ?>
