@@ -11,4 +11,7 @@ $lang['Via'] = 'Keresztül';
 $lang['Right bubble'] = 'Buborék jobbra';
 $lang['Button type'] = 'Gomb típusa';
 $lang['Top bubble'] = 'Buborék fent';
+$lang['Display buttons'] = 'Gombok megjelenítése';
+$lang['on photo and album'] = 'képen és albumon';
+$lang['only on photo'] = 'csak képen';
 ?>
