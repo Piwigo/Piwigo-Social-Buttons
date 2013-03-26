@@ -30,4 +30,7 @@ $lang['Top'] = 'بالا';
 $lang['Button type'] = 'نوع دکمه';
 $lang['Right bubble'] = 'حباب راست';
 $lang['Top bubble'] = 'حباب بالا';
+$lang['Display buttons'] = 'نمایش دکمه‌ها';
+$lang['on photo and album'] = 'روی عکس و آلبوم';
+$lang['only on photo'] = 'تنها روی عکس';
 ?>
