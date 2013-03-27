@@ -27,4 +27,10 @@ $lang['Button position on picture page'] = 'ตำแหน่งปุ่มบ
 $lang['Inline text'] = 'ในบรรทัดข้อความ';
 $lang['Toolbar'] = 'แถบเครื่องมือ';
 $lang['Top'] = 'ด้านบนสุด';
+$lang['Button type'] = 'ชนิดปุ่ม';
+$lang['Display buttons'] = 'แสดงปุ่ม';
+$lang['Right bubble'] = 'รูปแบบฟองด้านขวา';
+$lang['Top bubble'] = 'รูปแบบฟองด้านบน';
+$lang['on photo and album'] = 'ทั้งในภาพและอัลบั้ม';
+$lang['only on photo'] = 'เฉพาะในภาพ';
 ?>
