@@ -11,4 +11,7 @@ $lang['Via'] = 'Prostřednictvím';
 $lang['Button type'] = 'Typ tlačítka';
 $lang['Right bubble'] = 'Pravá bublina';
 $lang['Top bubble'] = 'Horní bublina';
+$lang['Display buttons'] = 'Zobraz tlačítka';
+$lang['on photo and album'] = 'Na fotce a albu';
+$lang['only on photo'] = 'Jen na fotce';
 ?>
