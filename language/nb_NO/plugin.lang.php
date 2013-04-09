@@ -30,4 +30,7 @@ $lang['Top'] = 'Topp';
 $lang['Button type'] = 'Knapptype';
 $lang['Right bubble'] = 'Høyre boble';
 $lang['Top bubble'] = 'Topp boble';
+$lang['Display buttons'] = 'Vis knapper';
+$lang['on photo and album'] = 'på bilder og album';
+$lang['only on photo'] = 'bare på bilder';
 ?>
