@@ -34,4 +34,5 @@ $lang['Top bubble'] = 'Toppbubbla';
 $lang['Display buttons'] = 'Visa knappar';
 $lang['on photo and album'] = 'på bild och album';
 $lang['only on photo'] = 'endast på bild';
+
 ?>
