@@ -32,4 +32,7 @@ $lang['Via'] = 'Käyttäjältä';
 $lang['Button type'] = 'Painikkeen tyyppi';
 $lang['Right bubble'] = 'Oikeanpuoleinen kupla';
 $lang['Top bubble'] = 'yläkupla';
+$lang['Display buttons'] = 'Näytä painikkeet';
+$lang['on photo and album'] = 'kuvissa ja albumeissa';
+$lang['only on photo'] = 'vain kuvissa';
 ?>
