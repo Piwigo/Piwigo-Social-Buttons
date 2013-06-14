@@ -45,4 +45,4 @@ function socialbutt_google($basename, $root_url, &$tpl_vars, &$buttons)
   $buttons[] = 'google_button';
 }
 
-?>  
+?>

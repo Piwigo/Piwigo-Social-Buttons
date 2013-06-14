@@ -44,4 +44,4 @@ function socialbutt_facebook($basename, $root_url, &$tpl_vars, &$buttons)
   $buttons[] = 'facebook_button';
 }
 
-?>  
+?>

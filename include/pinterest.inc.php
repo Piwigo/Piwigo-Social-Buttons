@@ -29,4 +29,4 @@ function socialbutt_pinterest($basename, $root_url, &$tpl_vars, &$buttons)
   $buttons[] = 'pinterest_button';
 }
 
-?>  
+?>

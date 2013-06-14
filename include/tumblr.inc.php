@@ -39,4 +39,4 @@ function socialbutt_tumblr($basename, $root_url, &$tpl_vars, &$buttons)
   $buttons[] = 'tumblr_button';
 }
 
-?>  
+?>
