@@ -14,7 +14,7 @@ function socialbutt_google($basename, $root_url, &$tpl_vars, &$buttons)
   
   
   // if the link is in the toolbar, we must use smaller buttons
-  if ( $conf['SocialButtons']['position'] == 'index' or  $conf['SocialButtons']['position'] == 'toolbar')
+  if ($conf['SocialButtons']['position'] == 'index' or $conf['SocialButtons']['position'] == 'toolbar')
   {
     if ($conf['SocialButtons']['google']['size'] == 'tall' and $conf['SocialButtons']['google']['annotation'] == 'bubble')
     {

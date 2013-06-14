@@ -17,11 +17,11 @@ function socialbutt_pinterest($basename, $root_url, &$tpl_vars, &$buttons)
   
   if ($conf['SocialButtons']['pinterest']['img_size'] == 'Original')
   {
-    $tpl_vars['PINTEREST']['source'] = $root_url.ltrim($picture['current']['src_image']->get_url(), './');
+    $tpl_vars['PINTEREST']['source'] = $picture['current']['src_image']->get_url();
   }
   else
   {
-    $tpl_vars['PINTEREST']['source'] = $root_url.ltrim(DerivativeImage::url($conf['SocialButtons']['pinterest']['img_size'], $picture['current']['src_image']), './');
+    $tpl_vars['PINTEREST']['source'] = DerivativeImage::url($conf['SocialButtons']['pinterest']['img_size'], $picture['current']['src_image']);
   }
   
   

@@ -225,7 +225,7 @@ jQuery("input.enable").change(function() {
         {'Annotation'|@translate}
       </td>
       <td>
-        <label><input type="radio" name="facebook[layout]" value="none" {if $facebook.layout=='none'}checked="checked"{/if}/> {'None'|@translate}</label><br>
+        <!-- <label><input type="radio" name="facebook[layout]" value="none" {if $facebook.layout=='none'}checked="checked"{/if}/> {'None'|@translate}</label><br> -->
         <label><input type="radio" name="facebook[layout]" value="button_count" {if $facebook.layout=='button_count'}checked="checked"{/if}/> {'Right bubble'|@translate}</label><br>
         <label><input type="radio" name="facebook[layout]" value="box_count" {if $facebook.layout=='box_count'}checked="checked"{/if}/> {'Top bubble'|@translate}</label><br>
         <label><input type="radio" name="facebook[layout]" value="standard" {if $facebook.layout=='standard'}checked="checked"{/if}/> {'Inline text'|@translate}</label>

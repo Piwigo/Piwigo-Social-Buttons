@@ -96,16 +96,21 @@ function socialbutt_add_button()
   global $conf, $template;
   
   $basename = script_basename();
+  set_make_full_url();
   $root_url = get_absolute_root_url();
   
   if ($basename == 'picture')
   {
-    $share_url = $root_url.ltrim(duplicate_picture_url(), './');
+    // global $picture;
+    
+    // if ($picture['current']['level'] > 0) return;
+    
+    $share_url = duplicate_picture_url();
   }
   else if ($basename == 'index' and $conf['SocialButtons']['on_index'])
   {
     $conf['SocialButtons']['position'] = 'index';
-    $share_url = $root_url.ltrim(duplicate_index_url(array(), array('start')), './');
+    $share_url = duplicate_index_url(array(), array('start'));
   }
   else
   {
@@ -117,7 +122,7 @@ function socialbutt_add_button()
   $tpl_vars = array(
     'share_url' => $share_url,
     'position' => $conf['SocialButtons']['position'],
-    'copyright' => ' (from <a href="'.$share_url.'">'.$conf['gallery_title'].'</a>)',
+    'copyright' => '(from <a href="'.$share_url.'">'.$conf['gallery_title'].'</a>)',
     );
   $buttons = array();
   
@@ -147,6 +152,8 @@ function socialbutt_add_button()
     include_once(SOCIALBUTT_PATH . 'include/pinterest.inc.php');
     socialbutt_pinterest($basename, $root_url, $tpl_vars, $buttons);
   }
+  
+  unset_make_full_url();
   
   if (empty($buttons))
   {

@@ -18,11 +18,11 @@ function socialbutt_tumblr($basename, $root_url, &$tpl_vars, &$buttons)
     
     if ($conf['SocialButtons']['tumblr']['img_size'] == 'Original')
     {
-      $tpl_vars['TUMBLR']['source'] = $root_url.ltrim($picture['current']['src_image']->get_url(), './');
+      $tpl_vars['TUMBLR']['source'] = $picture['current']['src_image']->get_url();
     }
     else
     {
-      $tpl_vars['TUMBLR']['source'] = $root_url.ltrim(DerivativeImage::url($conf['SocialButtons']['tumblr']['img_size'], $picture['current']['src_image']), './');
+      $tpl_vars['TUMBLR']['source'] = DerivativeImage::url($conf['SocialButtons']['tumblr']['img_size'], $picture['current']['src_image']);
     }
   }
   // button on other pages

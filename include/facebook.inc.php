@@ -17,7 +17,7 @@ function socialbutt_facebook($basename, $root_url, &$tpl_vars, &$buttons)
   
   
   // if the link is in the toolbar, we must use smaller buttons
-  if ( $conf['SocialButtons']['position'] == 'index' or  $conf['SocialButtons']['position'] == 'toolbar')
+  if ($conf['SocialButtons']['position'] == 'index' or $conf['SocialButtons']['position'] == 'toolbar')
   {
     if ($conf['SocialButtons']['facebook']['layout'] == 'box_count')
     {

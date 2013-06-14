@@ -78,6 +78,11 @@ function socialbutt_install()
       $new_conf['on_index'] = true;
     }
     
+    if ($new_conf['facebook']['layout'] == 'none')
+    {
+      $new_conf['facebook']['layout'] = 'button_count';
+    }
+    
     $conf['SocialButtons'] = serialize($new_conf);
     conf_update_param('SocialButtons', $conf['SocialButtons']);
   }
