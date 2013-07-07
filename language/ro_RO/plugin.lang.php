@@ -32,4 +32,7 @@ $lang['Via'] = 'Via';
 $lang['Button type'] = 'Tipul butonului';
 $lang['Right bubble'] = 'Balon dreapta';
 $lang['Top bubble'] = 'Balon sus';
+$lang['Display buttons'] = 'Afișează butoanele';
+$lang['on photo and album'] = 'pe fotografie și pe album';
+$lang['only on photo'] = 'numai pe fotografie';
 ?>
