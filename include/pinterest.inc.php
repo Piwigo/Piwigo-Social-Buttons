@@ -3,7 +3,7 @@ defined('SOCIALBUTT_PATH') or die('Hacking attempt!');
 
 function socialbutt_pinterest($basename, $root_url, &$tpl_vars, &$buttons)
 {
-  // only on piture page
+  // only on picture page
   if ($basename != 'picture')
   {
     return;

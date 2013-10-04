@@ -23,7 +23,10 @@ function plugin_activate()
 
 function plugin_uninstall() 
 {
-  pwg_query('DELETE FROM `'. CONFIG_TABLE .'` WHERE param = "SocialButtons" LIMIT 1;');
+  global $conf;
+  
+  pwg_query('DELETE FROM `'. CONFIG_TABLE .'` WHERE param = "SocialButtons";');
+  unset($conf['SocialButtons']);
 }
 
 ?>

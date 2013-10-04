@@ -12,4 +12,6 @@ $lang['Top bubble'] = 'Top bubble';
 $lang['Display buttons'] = 'Display buttons';
 $lang['on photo and album'] = 'on photo and album';
 $lang['only on photo'] = 'only on photo';
+$lang['Light mode'] = 'Light mode';
+$lang['When light mode is activated no external script is loaded, it <b>speeds up the load of the page and disables user tracking</b> but also disables annotations and in-page popups.'] = 'When light mode is activated no external script is loaded, it <b>speeds up the load of the page and disables user tracking</b> but also disables annotations and in-page popups.';
 ?>

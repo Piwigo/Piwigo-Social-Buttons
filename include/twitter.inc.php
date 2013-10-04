@@ -5,7 +5,7 @@ function socialbutt_twitter($basename, $root_url, &$tpl_vars, &$buttons)
 {
   global $conf, $template, $user;
   
- $twitter_langs = array(
+  $twitter_langs = array(
     'fr','en','ar','ja','es','de','it','id','pt','ko','tr','ru','nl','fil','msa','zh-tw',
     'zh-cn','hi','no','sv','fi','da','pl','hu','fa','he','ur','th','uk','ca','el','eu','cs'
     );

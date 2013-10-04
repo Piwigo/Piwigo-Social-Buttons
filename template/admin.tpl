@@ -2,11 +2,15 @@
 
 {html_style}{literal}
 .socialbutt.disabled thead img {
+  -webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
   filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='saturate' values='0'/></filter></svg>#grayscale"); /* Firefox 10+ */
   filter: gray; /* IE6-9 */
-  -webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
 }
-{/literal}{/html_style}
+{/literal}
+{if $light}
+.not-light {ldelim} display:none; }
+{/if}
+{/html_style}
 
 {footer_script}{literal}
 jQuery("input.enable").change(function() {
@@ -21,6 +25,23 @@ jQuery("input.enable").change(function() {
     $parent.addClass('enabled');
     $parent.removeClass('disabled');
   }
+});
+
+jQuery("input#light_mode").on('change', function() {
+  if ($(this).is(":checked")) {
+    $('.not-light').hide();
+  }
+  else {
+    $('.not-light').show();
+  }
+});
+
+jQuery(".showInfo").tipTip({
+  delay: 0,
+  fadeIn: 200,
+  fadeOut: 200,
+  maxWidth: '300px',
+  defaultPosition: 'bottom'
 });
 {/literal}{/footer_script}
 
@@ -51,6 +72,15 @@ jQuery("input.enable").change(function() {
     <td>
       <label><input type="radio" name="on_index" value="true" {if $on_index}checked="checked"{/if}/> {'on photo and album'|@translate}</label><br>
       <label><input type="radio" name="on_index" value="false" {if not $on_index}checked="checked"{/if}/> {'only on photo'|@translate}</label>
+    </td>
+  </tr>
+  <tr class="property">
+    <td>
+      <label for="light_mode">{'Light mode'|@translate}</label>
+    </td>
+    <td>
+      <input type="checkbox" id="light_mode" name="light" {if $light}checked="checked"{/if}/>
+      <a class="showInfo" title="{'When light mode is activated no external script is loaded, it <b>speeds up the load of the page and disables user tracking</b> but also disables annotations and in-page popups.'|@translate}">i</a>
     </td>
   </tr>
 </table>
@@ -86,7 +116,7 @@ jQuery("input.enable").change(function() {
         <img src="{$SOCIALBUTT_PATH}template/images/twitter_large.png"/>
       </label></td>
     </tr>
-    <tr class="property">
+    <tr class="property not-light">
       <td>
         {'Annotation'|@translate}
       </td>
@@ -144,7 +174,7 @@ jQuery("input.enable").change(function() {
         <img src="{$SOCIALBUTT_PATH}template/images/google_tall.png"/>
       </label></td>
     </tr>
-    <tr class="property">
+    <tr class="property not-light">
       <td>
         {'Annotation'|@translate}
       </td>
@@ -179,7 +209,7 @@ jQuery("input.enable").change(function() {
         {html_options name="pinterest[img_size]" values=$img_sizes output=$img_sizes|translate selected=$pinterest.img_size}
       </td>
     </tr>
-    <tr class="property">
+    <tr class="property not-light">
       <td>
         {'Annotation'|@translate}
       </td>
@@ -220,7 +250,7 @@ jQuery("input.enable").change(function() {
         <img src="{$SOCIALBUTT_PATH}template/images/facebook_dark.png"/>
       </label></td>
     </tr>
-    <tr class="property">
+    <tr class="property not-light">
       <td>
         {'Annotation'|@translate}
       </td>

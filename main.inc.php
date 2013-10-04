@@ -118,10 +118,10 @@ function socialbutt_add_button()
   }
   
   
-  define('SOCIALBUTT_POSITION', $conf['SocialButtons']['position']);
   $tpl_vars = array(
     'share_url' => $share_url,
     'position' => $conf['SocialButtons']['position'],
+    'light' => $conf['SocialButtons']['light'],
     'copyright' => '(from <a href="'.$share_url.'">'.$conf['gallery_title'].'</a>)',
     );
   $buttons = array();
@@ -176,16 +176,19 @@ function socialbutt_add_button()
   switch ($conf['SocialButtons']['position'])
   {
     case 'index':
-      foreach ($buttons as $button) {
-        $template->add_index_button('<li>'.$button.'</li>', 100);
+      foreach ($buttons as $button)
+      {
+        $template->add_index_button($button, 100);
       }
       break;
     case 'toolbar':
-      foreach ($buttons as $button) {
+      foreach ($buttons as $button)
+      {
         $template->add_picture_button($button, 100);
       }
       break;
     default;
+      define('SOCIALBUTT_POSITION', $conf['SocialButtons']['position']);
       $template->assign('SOCIALBUTT_BUTTONS', $buttons);
       $template->set_prefilter('picture', 'socialbutt_add_button_prefilter');
   }
@@ -197,12 +200,12 @@ function socialbutt_add_button_prefilter($content)
   {
     case 'top':
       $search = '<div id="theImage">';
-      $add = '<div>{foreach from=$SOCIALBUTT_BUTTONS item=BUTTON}{$BUTTON} {/foreach}</div>';
+      $add = '<div id="socialButtons">{foreach from=$SOCIALBUTT_BUTTONS item=BUTTON}{$BUTTON} {/foreach}</div>';
       break;
       
     case 'bottom':
       $search = '{$ELEMENT_CONTENT}';
-      $add = '<div>{foreach from=$SOCIALBUTT_BUTTONS item=BUTTON}{$BUTTON} {/foreach}</div>';
+      $add = '<div id="socialButtons">{foreach from=$SOCIALBUTT_BUTTONS item=BUTTON}{$BUTTON} {/foreach}</div>';
       break;
   }
 

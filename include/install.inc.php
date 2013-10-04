@@ -10,6 +10,7 @@ function socialbutt_install()
     $default_config = array(
       'position' => 'toolbar',
       'on_index' => true,
+      'light' => false,
       'twitter' => array(
         'enabled' => true,
         'size' => 'small',
@@ -41,21 +42,21 @@ function socialbutt_install()
     if (isset($conf['TumblrShare']))
     {
       $temp = is_string($conf['TumblrShare']) ? unserialize($conf['TumblrShare']) : $conf['TumblrShare'];
-      $default_config['tumblr']['type'] = $temp['type'];
-      $default_config['tumblr']['img_size'] = $temp['img_size'];
+      if (!empty($temp['type']))      $default_config['tumblr']['type'] =     $temp['type'];
+      if (!empty($temp['img_size']))  $default_config['tumblr']['img_size'] = $temp['img_size'];
     }
     if (isset($conf['TweetThis']))
     {
       $temp = is_string($conf['TweetThis']) ? unserialize($conf['TweetThis']) : $conf['TweetThis'];
-      $default_config['twitter']['size'] = $temp['size'];
-      $default_config['twitter']['count'] = $temp['count'] ? 'bubble' : 'none';
-      $default_config['twitter']['via'] = $temp['via'];
+      if (!empty($temp['type']))  $default_config['twitter']['size'] =  $temp['size'];
+      if (!empty($temp['count'])) $default_config['twitter']['count'] = $temp['count'] ? 'bubble' : 'none';
+      if (!empty($temp['via']))   $default_config['twitter']['via'] =   $temp['via'];
     }
     if (isset($conf['GooglePlusOne']))
     {
       $temp = is_string($conf['GooglePlusOne']) ? unserialize($conf['GooglePlusOne']) : $conf['GooglePlusOne'];
-      $default_config['google']['size'] = $temp['size'];
-      $default_config['google']['annotation'] = $temp['annotation'];
+      if (!empty($temp['size']))        $default_config['google']['size'] =       $temp['size'];
+      if (!empty($temp['annotation']))  $default_config['google']['annotation'] = $temp['annotation'];
     }
     
     $conf['SocialButtons'] = serialize($default_config);
@@ -63,7 +64,7 @@ function socialbutt_install()
   }
   else
   {
-    $new_conf = unserialize($conf['SocialButtons']);
+    $new_conf = is_string($conf['SocialButtons']) ? unserialize($conf['SocialButtons']) : $conf['SocialButtons'];
     
     if (empty($new_conf['pinterest']))
     {
@@ -73,6 +74,7 @@ function socialbutt_install()
         'img_size' => 'Original',
         );
     }
+    
     if (!isset($new_conf['on_index']))
     {
       $new_conf['on_index'] = true;
@@ -81,6 +83,11 @@ function socialbutt_install()
     if ($new_conf['facebook']['layout'] == 'none')
     {
       $new_conf['facebook']['layout'] = 'button_count';
+    }
+    
+    if (!isset($new_conf['light']))
+    {
+      $new_conf['light'] = false;
     }
     
     $conf['SocialButtons'] = serialize($new_conf);
