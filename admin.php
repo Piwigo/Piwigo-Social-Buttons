@@ -38,6 +38,11 @@ if (isset($_POST['submit']))
       'layout' => $_POST['pinterest']['layout'],
       'img_size' => $_POST['pinterest']['img_size'],
       ),
+    'reddit' => array(
+      'enabled' => isset($_POST['reddit']['enabled']),
+      'type' => $_POST['reddit']['type'],
+      'community' => $_POST['reddit']['community'],
+      ),
     );
   
   conf_update_param('SocialButtons', serialize($conf['SocialButtons']));

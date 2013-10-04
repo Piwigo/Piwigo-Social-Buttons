@@ -37,6 +37,11 @@ function socialbutt_install()
         'layout' => 'horizontal',
         'img_size' => 'Original',
         ),
+      'reddit' => array(
+        'enabled' => true,
+        'type' => 'interactive',
+        'community' => null,
+        ),
       );
     
     if (isset($conf['TumblrShare']))
@@ -72,6 +77,15 @@ function socialbutt_install()
         'enabled' => true,
         'layout' => 'horizontal',
         'img_size' => 'Original',
+        );
+    }
+    
+    if (empty($new_conf['reddit']))
+    {
+      $new_conf['reddit'] = array(
+        'enabled' => false,
+        'type' => 'interactive',
+        'community' => null,
         );
     }
     

@@ -336,6 +336,55 @@ jQuery(".showInfo").tipTip({
 </table>
 </div> {* <!-- tumblr --> *}
 
+<div class="socialbutt {if not $reddit.enabled}disabled{else}enabled{/if}"> {* <!-- reddit --> *}
+<table>
+  <thead>
+    <tr><td colspan="2">
+      <label title="{if $reddit.enabled}{'Disable'|@translate}{else}{'Enable'|@translate}{/if}">
+        <img src="{$SOCIALBUTT_PATH}template/images/reddit_logo.png"/>
+        <input class="enable" style="display:none;" type="checkbox" name="reddit[enabled]" {if $reddit.enabled}checked="checked"{/if}/>
+      </label>
+    </td></tr>
+  </thead>
+  <tbody>
+    <tr class="property">
+      <td>
+        {'Button type'|@translate}
+      </td>
+      <td></td>
+    </tr>
+    <tr class="button">
+      <td><label>
+        <img src="http://fr.reddit.com/static/spreddit7.gif"/>
+        <input type="radio" name="reddit[type]" value="spreddit7" {if $reddit.type=='spreddit7'}checked="checked"{/if}/>
+      </label></td>
+      <td><label>
+        <input type="radio" name="reddit[type]" value="spreddit6" {if $reddit.type=='spreddit6'}checked="checked"{/if}/>
+        <img src="http://fr.reddit.com/static/spreddit6.gif"/>
+      </label></td>
+    </tr>
+    <tr class="button">
+      <td><label>
+        <img src="http://fr.reddit.com/static/spreddit1.gif"/>
+        <input type="radio" name="reddit[type]" value="spreddit1" {if $reddit.type=='spreddit1'}checked="checked"{/if}/>
+      </label></td>
+      <td><label>
+        <input type="radio" name="reddit[type]" value="interactive" {if $reddit.type=='interactive'}checked="checked"{/if}/>
+        <img src="{$SOCIALBUTT_PATH}template/images/reddit_interactive.png"/>
+      </label></td>
+    </tr>
+    <tr class="property">
+      <td>
+        <label for="reddit_community">{'Community'|@translate}</label>
+      </td>
+      <td>
+        <input type="text" id="reddit_community" name="reddit[community]" value="{$reddit.community}"/>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div> {* <!-- tumblr --> *}
+
 <br>
 
 <div class="submit">

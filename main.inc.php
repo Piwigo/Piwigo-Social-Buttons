@@ -152,6 +152,11 @@ function socialbutt_add_button()
     include_once(SOCIALBUTT_PATH . 'include/pinterest.inc.php');
     socialbutt_pinterest($basename, $root_url, $tpl_vars, $buttons);
   }
+  if ($conf['SocialButtons']['reddit']['enabled'])
+  {
+    include_once(SOCIALBUTT_PATH . 'include/reddit.inc.php');
+    socialbutt_reddit($basename, $root_url, $tpl_vars, $buttons);
+  }
   
   unset_make_full_url();
   
