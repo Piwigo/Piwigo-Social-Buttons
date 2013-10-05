@@ -35,4 +35,7 @@ $lang['Top bubble'] = 'yläkupla';
 $lang['Display buttons'] = 'Näytä painikkeet';
 $lang['on photo and album'] = 'kuvissa ja albumeissa';
 $lang['only on photo'] = 'vain kuvissa';
+$lang['Community'] = 'Yhteisö';
+$lang['Light mode'] = 'Kevyt tila';
+$lang['When light mode is activated no external script is loaded, it <b>speeds up the load of the page and disables user tracking</b> but also disables annotations and in-page popups.'] = 'Kevyen tilan ollessa päällä ulkoisia skriptoja ei ladata. Se <b>nopeuttaa sivulatauksia ja poistaa käyttäjien seurannan käytöstä</b>, mutta lisäksi poistuvat myös huomautukset ja sivunsisäiset ponnahdusviestit.';
 ?>
