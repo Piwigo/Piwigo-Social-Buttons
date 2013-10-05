@@ -35,4 +35,7 @@ $lang['Top bubble'] = 'Górny bombelek';
 $lang['Display buttons'] = 'Wyświetl przyciski';
 $lang['on photo and album'] = 'na zdjęciu i albumie';
 $lang['only on photo'] = 'tylko na zdjęciu';
+$lang['Community'] = 'Społeczność';
+$lang['Light mode'] = 'Tryb lekki';
+$lang['When light mode is activated no external script is loaded, it <b>speeds up the load of the page and disables user tracking</b> but also disables annotations and in-page popups.'] = 'W trybie lekkim żadne zewnętrzne skrypty nie są ładowane. <b>Przyspiesza to wczytywanie strony i wyłączona śledzenie użytkownika</b>, a także wyłączona powiadomienia.';
 ?>
