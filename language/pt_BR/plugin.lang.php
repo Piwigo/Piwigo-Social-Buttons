@@ -35,4 +35,7 @@ $lang['Top bubble'] = 'Bolha no topo';
 $lang['Display buttons'] = 'Exibir botões';
 $lang['on photo and album'] = 'na foto e álbum';
 $lang['only on photo'] = 'apenas na foto';
+$lang['Community'] = 'Comunidade';
+$lang['Light mode'] = 'Modo suave';
+$lang['When light mode is activated no external script is loaded, it <b>speeds up the load of the page and disables user tracking</b> but also disables annotations and in-page popups.'] = 'Quando o modo de suave é ativado nenhum script externo é carregado, ele <b>acelera o carregamento da página e desativa o rastreamento de usuário</b>, mas também desativa as anotações e pop-ups em páginas.';
 ?>
