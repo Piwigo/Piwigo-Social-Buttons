@@ -14,4 +14,7 @@ $lang['Button type'] = 'Taustiņa tips';
 $lang['only on photo'] = 'tikai uz foto';
 $lang['on photo and album'] = 'uz foto un albūma';
 $lang['Display buttons'] = 'Rādīt pogas';
+$lang['When light mode is activated no external script is loaded, it <b>speeds up the load of the page and disables user tracking</b> but also disables annotations and in-page popups.'] = 'Ja tiek aktivizēts atvieglotais režīms netiek ielādēts ārējais skripts, tas <b> paātrina lapas ielādes ātrumu un izslēdz lietotāja izsekošanu </ b>, bet arī izslēdz anotācijas un uzlecošos logus lapā.';
+$lang['Light mode'] = 'Atvieglotais režīms';
+$lang['Community'] = 'Kopiena';
 ?>
