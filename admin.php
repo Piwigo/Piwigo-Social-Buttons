@@ -11,6 +11,7 @@ if (isset($_POST['submit']))
   $conf['SocialButtons'] = array(
     'position' => $_POST['position'],
     'on_index' => get_boolean($_POST['on_index']),
+    'img_size' => $_POST['img_size'],
     'light' => isset($_POST['light']),
     'twitter' => array(
       'enabled' => isset($_POST['twitter']['enabled']),
@@ -26,7 +27,6 @@ if (isset($_POST['submit']))
     'tumblr' => array(
       'enabled' => isset($_POST['tumblr']['enabled']),
       'type' => $_POST['tumblr']['type'],
-      'img_size' => $_POST['tumblr']['img_size'],
       ),
     'facebook' => array(
       'enabled' => isset($_POST['facebook']['enabled']),
@@ -36,7 +36,6 @@ if (isset($_POST['submit']))
     'pinterest' => array(
       'enabled' => isset($_POST['pinterest']['enabled']),
       'layout' => $_POST['pinterest']['layout'],
-      'img_size' => $_POST['pinterest']['img_size'],
       ),
     'reddit' => array(
       'enabled' => isset($_POST['reddit']['enabled']),

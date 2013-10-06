@@ -93,7 +93,7 @@ WHERE id = "'. SOCIALBUTT_ID .'"';
  */
 function socialbutt_add_button()
 {
-  global $conf, $template;
+  global $conf, $template, $picture;
   
   $basename = script_basename();
   set_make_full_url();
@@ -120,12 +120,26 @@ function socialbutt_add_button()
   
   $tpl_vars = array(
     'share_url' => $share_url,
+    'basename' => $basename,
     'position' => $conf['SocialButtons']['position'],
     'light' => $conf['SocialButtons']['light'],
     'copyright' => '(from <a href="'.$share_url.'">'.$conf['gallery_title'].'</a>)',
     );
-  $buttons = array();
   
+  if ($basename == 'picture')
+  {
+    if ($conf['SocialButtons']['img_size'] == 'Original')
+    {
+      $tpl_vars['source'] = $picture['current']['src_image']->get_url();
+    }
+    else
+    {
+      $tpl_vars['source'] = DerivativeImage::url($conf['SocialButtons']['img_size'], $picture['current']['src_image']);
+    }
+  }
+  
+  
+  $buttons = array();
   
   if ($conf['SocialButtons']['google']['enabled'])
   {

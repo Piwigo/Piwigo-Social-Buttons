@@ -76,6 +76,14 @@ jQuery(".showInfo").tipTip({
   </tr>
   <tr class="property">
     <td>
+      {'Shared picture size'|@translate}
+    </td>
+    <td>
+      {html_options name="img_size" values=$img_sizes output=$img_sizes|translate selected=$img_size}
+    </td>
+  </tr>
+  <tr class="property">
+    <td>
       <label for="light_mode">{'Light mode'|@translate}</label>
     </td>
     <td>
@@ -190,39 +198,6 @@ jQuery(".showInfo").tipTip({
 
 <br>
 
-<div class="socialbutt {if not $pinterest.enabled}disabled{else}enabled{/if}"> {* <!-- pinterest --> *}
-<table>
-  <thead>
-    <tr><td colspan="2">
-      <label title="{if $pinterest.enabled}{'Disable'|@translate}{else}{'Enable'|@translate}{/if}">
-        <img src="{$SOCIALBUTT_PATH}template/images/pinterest_logo.png"/>
-        <input class="enable" style="display:none;" type="checkbox" name="pinterest[enabled]" {if $pinterest.enabled}checked="checked"{/if}/>
-      </label>
-    </td></tr>
-  </thead>
-  <tbody>
-    <tr class="property">
-      <td>
-        {'Shared picture size'|@translate}
-      </td>
-      <td>
-        {html_options name="pinterest[img_size]" values=$img_sizes output=$img_sizes|translate selected=$pinterest.img_size}
-      </td>
-    </tr>
-    <tr class="property not-light">
-      <td>
-        {'Annotation'|@translate}
-      </td>
-      <td>
-        <label><input type="radio" name="pinterest[layout]" value="none" {if $pinterest.layout=='none'}checked="checked"{/if}/> {'None'|@translate}</label><br>
-        <label><input type="radio" name="pinterest[layout]" value="horizontal" {if $pinterest.layout=='horizontal'}checked="checked"{/if}/> {'Right bubble'|@translate}</label><br>
-        <label><input type="radio" name="pinterest[layout]" value="vertical" {if $pinterest.layout=='vertical'}checked="checked"{/if}/> {'Top bubble'|@translate}</label>
-      </td>
-    </tr>
-  </tbody>
-</table>
-</div> {* <!-- pinterest --> *}
-
 <div class="socialbutt {if not $facebook.enabled}disabled{else}enabled{/if}"> {* <!-- facebook --> *}
 <table>
   <thead>
@@ -264,6 +239,55 @@ jQuery(".showInfo").tipTip({
   </tbody>
 </table>
 </div> {* <!-- facebook --> *}
+
+<div class="socialbutt {if not $reddit.enabled}disabled{else}enabled{/if}"> {* <!-- reddit --> *}
+<table>
+  <thead>
+    <tr><td colspan="2">
+      <label title="{if $reddit.enabled}{'Disable'|@translate}{else}{'Enable'|@translate}{/if}">
+        <img src="{$SOCIALBUTT_PATH}template/images/reddit_logo.png"/>
+        <input class="enable" style="display:none;" type="checkbox" name="reddit[enabled]" {if $reddit.enabled}checked="checked"{/if}/>
+      </label>
+    </td></tr>
+  </thead>
+  <tbody>
+    <tr class="property">
+      <td>
+        {'Button type'|@translate}
+      </td>
+      <td></td>
+    </tr>
+    <tr class="button">
+      <td><label>
+        <img src="http://fr.reddit.com/static/spreddit7.gif"/>
+        <input type="radio" name="reddit[type]" value="spreddit7" {if $reddit.type=='spreddit7'}checked="checked"{/if}/>
+      </label></td>
+      <td><label>
+        <input type="radio" name="reddit[type]" value="spreddit6" {if $reddit.type=='spreddit6'}checked="checked"{/if}/>
+        <img src="http://fr.reddit.com/static/spreddit6.gif"/>
+      </label></td>
+    </tr>
+    <tr class="button">
+      <td><label>
+        <img src="http://fr.reddit.com/static/spreddit1.gif"/>
+        <input type="radio" name="reddit[type]" value="spreddit1" {if $reddit.type=='spreddit1'}checked="checked"{/if}/>
+      </label></td>
+      <td><label>
+        <input type="radio" name="reddit[type]" value="interactive" {if $reddit.type=='interactive'}checked="checked"{/if}/>
+        <img src="{$SOCIALBUTT_PATH}template/images/reddit_interactive.png"/>
+      </label></td>
+    </tr>
+    <tr class="property">
+      <td>
+        <label for="reddit_community">{'Community'|@translate}</label>
+      </td>
+      <td>
+        <input type="text" id="reddit_community" name="reddit[community]" value="{$reddit.community}"/>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div> {* <!-- reddit --> *}
 
 <br>
 
@@ -324,66 +348,34 @@ jQuery(".showInfo").tipTip({
         <img src="http://platform.tumblr.com/v1/share_4T.png"/>
       </label></td>
     </tr>
-    <tr class="property">
-      <td>
-        {'Shared picture size'|@translate}
-      </td>
-      <td>
-        {html_options name="tumblr[img_size]" values=$img_sizes output=$img_sizes|translate selected=$tumblr.img_size}
-      </td>
-    </tr>
   </tbody>
 </table>
 </div> {* <!-- tumblr --> *}
 
-<div class="socialbutt {if not $reddit.enabled}disabled{else}enabled{/if}"> {* <!-- reddit --> *}
+<div class="socialbutt {if not $pinterest.enabled}disabled{else}enabled{/if}"> {* <!-- pinterest --> *}
 <table>
   <thead>
     <tr><td colspan="2">
-      <label title="{if $reddit.enabled}{'Disable'|@translate}{else}{'Enable'|@translate}{/if}">
-        <img src="{$SOCIALBUTT_PATH}template/images/reddit_logo.png"/>
-        <input class="enable" style="display:none;" type="checkbox" name="reddit[enabled]" {if $reddit.enabled}checked="checked"{/if}/>
+      <label title="{if $pinterest.enabled}{'Disable'|@translate}{else}{'Enable'|@translate}{/if}">
+        <img src="{$SOCIALBUTT_PATH}template/images/pinterest_logo.png"/>
+        <input class="enable" style="display:none;" type="checkbox" name="pinterest[enabled]" {if $pinterest.enabled}checked="checked"{/if}/>
       </label>
     </td></tr>
   </thead>
   <tbody>
-    <tr class="property">
+    <tr class="property not-light">
       <td>
-        {'Button type'|@translate}
-      </td>
-      <td></td>
-    </tr>
-    <tr class="button">
-      <td><label>
-        <img src="http://fr.reddit.com/static/spreddit7.gif"/>
-        <input type="radio" name="reddit[type]" value="spreddit7" {if $reddit.type=='spreddit7'}checked="checked"{/if}/>
-      </label></td>
-      <td><label>
-        <input type="radio" name="reddit[type]" value="spreddit6" {if $reddit.type=='spreddit6'}checked="checked"{/if}/>
-        <img src="http://fr.reddit.com/static/spreddit6.gif"/>
-      </label></td>
-    </tr>
-    <tr class="button">
-      <td><label>
-        <img src="http://fr.reddit.com/static/spreddit1.gif"/>
-        <input type="radio" name="reddit[type]" value="spreddit1" {if $reddit.type=='spreddit1'}checked="checked"{/if}/>
-      </label></td>
-      <td><label>
-        <input type="radio" name="reddit[type]" value="interactive" {if $reddit.type=='interactive'}checked="checked"{/if}/>
-        <img src="{$SOCIALBUTT_PATH}template/images/reddit_interactive.png"/>
-      </label></td>
-    </tr>
-    <tr class="property">
-      <td>
-        <label for="reddit_community">{'Community'|@translate}</label>
+        {'Annotation'|@translate}
       </td>
       <td>
-        <input type="text" id="reddit_community" name="reddit[community]" value="{$reddit.community}"/>
+        <label><input type="radio" name="pinterest[layout]" value="none" {if $pinterest.layout=='none'}checked="checked"{/if}/> {'None'|@translate}</label><br>
+        <label><input type="radio" name="pinterest[layout]" value="horizontal" {if $pinterest.layout=='horizontal'}checked="checked"{/if}/> {'Right bubble'|@translate}</label><br>
+        <label><input type="radio" name="pinterest[layout]" value="vertical" {if $pinterest.layout=='vertical'}checked="checked"{/if}/> {'Top bubble'|@translate}</label>
       </td>
     </tr>
   </tbody>
 </table>
-</div> {* <!-- tumblr --> *}
+</div> {* <!-- pinterest --> *}
 
 <br>
 

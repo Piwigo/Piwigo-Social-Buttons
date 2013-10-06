@@ -10,6 +10,7 @@ function socialbutt_install()
     $default_config = array(
       'position' => 'toolbar',
       'on_index' => true,
+      'img_size' => 'Original',
       'light' => false,
       'twitter' => array(
         'enabled' => true,
@@ -25,7 +26,6 @@ function socialbutt_install()
       'tumblr' => array(
         'enabled' => true,
         'type' => 'share_1',
-        'img_size' => 'Original',
         ),
       'facebook' => array(
         'enabled' => true,
@@ -35,7 +35,6 @@ function socialbutt_install()
       'pinterest' => array(
         'enabled' => true,
         'layout' => 'horizontal',
-        'img_size' => 'Original',
         ),
       'reddit' => array(
         'enabled' => true,
@@ -47,8 +46,8 @@ function socialbutt_install()
     if (isset($conf['TumblrShare']))
     {
       $temp = is_string($conf['TumblrShare']) ? unserialize($conf['TumblrShare']) : $conf['TumblrShare'];
-      if (!empty($temp['type']))      $default_config['tumblr']['type'] =     $temp['type'];
-      if (!empty($temp['img_size']))  $default_config['tumblr']['img_size'] = $temp['img_size'];
+      if (!empty($temp['type']))      $default_config['tumblr']['type'] = $temp['type'];
+      if (!empty($temp['img_size']))  $default_config['img_size'] =       $temp['img_size'];
     }
     if (isset($conf['TweetThis']))
     {
@@ -76,7 +75,6 @@ function socialbutt_install()
       $new_conf['pinterest'] = array(
         'enabled' => true,
         'layout' => 'horizontal',
-        'img_size' => 'Original',
         );
     }
     
@@ -102,6 +100,12 @@ function socialbutt_install()
     if (!isset($new_conf['light']))
     {
       $new_conf['light'] = false;
+    }
+    
+    if (!isset($new_conf['img_size']))
+    {
+      $new_conf['img_size'] = isset($new_conf['tumblr']['img_size']) ? $new_conf['tumblr']['img_size'] : 'Original';
+      unset($new_conf['tumblr']['img_size'], $new_conf['pinterest']['img_size']);
     }
     
     $conf['SocialButtons'] = serialize($new_conf);

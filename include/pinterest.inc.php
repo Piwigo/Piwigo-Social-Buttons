@@ -9,21 +9,10 @@ function socialbutt_pinterest($basename, $root_url, &$tpl_vars, &$buttons)
     return;
   }
   
-  global $conf, $template, $picture;
+  global $conf, $template;
   
   // config
   $tpl_vars['PINTEREST'] = $conf['SocialButtons']['pinterest'];
-  $tpl_vars['PINTEREST']['title'] = $picture['current']['TITLE'];
-  
-  if ($conf['SocialButtons']['pinterest']['img_size'] == 'Original')
-  {
-    $tpl_vars['PINTEREST']['source'] = $picture['current']['src_image']->get_url();
-  }
-  else
-  {
-    $tpl_vars['PINTEREST']['source'] = DerivativeImage::url($conf['SocialButtons']['pinterest']['img_size'], $picture['current']['src_image']);
-  }
-  
   
   $template->set_filename('pinterest_button', realpath(SOCIALBUTT_PATH .'template/pinterest.tpl'));
   $buttons[] = 'pinterest_button';

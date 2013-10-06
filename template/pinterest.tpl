@@ -1,5 +1,5 @@
 {strip}
-<a href="http://pinterest.com/pin/create/button/?url={$SOCIALBUTT.share_url|urlencode}&media={$SOCIALBUTT.PINTEREST.source|urlencode}&description={$SOCIALBUTT.PINTEREST.title|cat:' '|cat:$SOCIALBUTT.copyright|urlencode}" rel="nofollow"
+<a href="http://pinterest.com/pin/create/button/?url={$SOCIALBUTT.share_url|urlencode}&media={$SOCIALBUTT.source|urlencode}&description={$PAGE_TITLE|cat:' '|cat:$SOCIALBUTT.copyright|urlencode}" rel="nofollow"
 {if $SOCIALBUTT.light}
   onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=470,width=600');return false;" target="_blank"
 {else}

@@ -19,6 +19,7 @@ function socialbutt_reddit($basename, $root_url, &$tpl_vars, &$buttons)
     $conf['SocialButtons']['reddit']['type'] = 'spreddit7';
   }
   
+  
   // config
   $tpl_vars['REDDIT'] = $conf['SocialButtons']['reddit'];
   
