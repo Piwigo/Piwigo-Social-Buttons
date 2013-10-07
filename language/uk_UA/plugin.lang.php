@@ -33,4 +33,7 @@ $lang['Button type'] = 'Тип кнопки';
 $lang['Display buttons'] = 'Відображати кнопки';
 $lang['on photo and album'] = 'на фото та альбомах';
 $lang['only on photo'] = 'тільки на фото';
+$lang['Community'] = 'Спільнота';
+$lang['Light mode'] = 'Режим світла';
+$lang['When light mode is activated no external script is loaded, it <b>speeds up the load of the page and disables user tracking</b> but also disables annotations and in-page popups.'] = 'Коли включається режим світла ніякі зовнішні скрипти не завантаженються, він <b>прискорює завантаження сторінок і відключає відстеження користувачів</b>, але і відключає анотації та на сторінці спливаючі вікна.';
 ?>
