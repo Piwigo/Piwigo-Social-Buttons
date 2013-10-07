@@ -33,4 +33,7 @@ $lang['Button type'] = 'Τύπος Κουμπιού';
 $lang['only on photo'] = 'μόνο στις φωτογραφίες';
 $lang['on photo and album'] = 'στις φωτογραφίες και τα λευκώματα';
 $lang['Display buttons'] = 'Εμφάνιση κουμπιιών';
+$lang['Light mode'] = 'Ελαφριά Λειτουργία';
+$lang['When light mode is activated no external script is loaded, it <b>speeds up the load of the page and disables user tracking</b> but also disables annotations and in-page popups.'] = 'Όταν είναι ενεργοποιημένη η ελαφριά λειτουργία, δεν επιτρέπει τη φόρτωση εξωτερικού script, <b>επιταχύνει το φόρτωση της σελίδας και απενεργοποιεί την παρακολούθηση χρηστών</b>, αλλά απενεργοποιεί και σχολιασμούς και τα αναδυόμενα παράθυρα της σελίδας.';
+$lang['Community'] = 'Κοινότητα';
 ?>
