@@ -6,7 +6,7 @@
   <a href="http://www.tumblr.com/share/link?url={$SOCIALBUTT.share_url|urlencode}&name={$PAGE_TITLE|cat:' | '|cat:$GALLERY_TITLE|urlencode}&description={$CONTENT_DESCRIPTION|cat:$SOCIALBUTT.copyright|urlencode}"
 {/if}
 {if $SOCIALBUTT.light}
-  onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=430,width=500');return false;" target="_blank" rel="nofollow" 
+  {' '}onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=430,width=500');return false;" target="_blank" rel="nofollow" 
 {else}
   {combine_script id='tumblr_share' load='footer' path='http://platform.tumblr.com/v1/share.js'}
 {/if}
