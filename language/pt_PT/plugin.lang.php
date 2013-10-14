@@ -27,12 +27,13 @@ $lang['Top'] = 'Acima';
 $lang['Annotation'] = 'Anotação';
 $lang['Bubble'] = 'Bolha';
 $lang['Inline text'] = 'Texto embutido';
-$lang['Shared picture size'] = 'Tamanho da foto partilhado';
-$lang['Via'] = 'Via';
 $lang['Button type'] = 'Tipo de botão';
 $lang['Right bubble'] = 'Bolha direita';
 $lang['Top bubble'] = 'Bolha superior';
 $lang['Display buttons'] = 'Mostrar botões';
 $lang['on photo and album'] = 'na foto e álbum ';
 $lang['only on photo'] = 'apenas na foto';
+$lang['Community'] = 'Comunidade';
+$lang['Light mode'] = 'Modo simples';
+$lang['When light mode is activated no external script is loaded, it <b>speeds up the load of the page and disables user tracking</b> but also disables annotations and in-page popups.'] = 'Quando o modo simples é ativado nenhum script externo é carregado, ele <b> acelera o carregamento da página e desativa o rastreamento do utilizador </b>, mas também desativa as anotações e pop-ups.';
 ?>
