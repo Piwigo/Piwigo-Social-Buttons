@@ -33,4 +33,7 @@ $lang['Top bubble'] = 'Topp boble';
 $lang['Display buttons'] = 'Vis knapper';
 $lang['on photo and album'] = 'på bilder og album';
 $lang['only on photo'] = 'bare på bilder';
+$lang['Community'] = 'Samfunn';
+$lang['Light mode'] = 'Enkel versjon';
+$lang['When light mode is activated no external script is loaded, it <b>speeds up the load of the page and disables user tracking</b> but also disables annotations and in-page popups.'] = 'Når enkel versjon er aktivert, vil ingen ekstra skript bli lastet. Den <b>laster siden kjappere og slår av brukersporing</b>, og den slår også av animeringen i popup vinduer.';
 ?>
