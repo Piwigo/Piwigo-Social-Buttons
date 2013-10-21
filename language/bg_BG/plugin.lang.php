@@ -34,4 +34,7 @@ $lang['only on photo'] = 'само на снимка';
 $lang['on photo and album'] = '
 на снимката и албума';
 $lang['Display buttons'] = 'Покажи бутони';
+$lang['When light mode is activated no external script is loaded, it <b>speeds up the load of the page and disables user tracking</b> but also disables annotations and in-page popups.'] = 'При олекотен режим стартира вътрешен скрипт. Той <b>ускорява зареждането на страницата и спира проследяването на потребители</b> и също забранява съобщенията и изкачащи прозорци.';
+$lang['Light mode'] = 'Режим олекотен';
+$lang['Community'] = 'Група';
 ?>
