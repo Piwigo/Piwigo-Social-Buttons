@@ -33,4 +33,7 @@ $lang['Top bubble'] = 'حباب بالا';
 $lang['Display buttons'] = 'نمایش دکمه‌ها';
 $lang['on photo and album'] = 'روی عکس و آلبوم';
 $lang['only on photo'] = 'تنها روی عکس';
+$lang['Community'] = 'انجمن';
+$lang['Light mode'] = 'حالتِ سبک';
+$lang['When light mode is activated no external script is loaded, it <b>speeds up the load of the page and disables user tracking</b> but also disables annotations and in-page popups.'] = 'وقتی که حالتِ سبک فعال باشد، هیچکدام از اسکریپت‌های خارجی بارگذاری نمی‌شوند. اینکار <b>سرعت صفحه را افزایش و ردیابیِ کاربران را غیر فعال</b> می‌کند ولی یادداشت‌ها و پاپ-آپ‌های درون صفحه‌ای نیز غیرفعال می‌شوند.';
 ?>
