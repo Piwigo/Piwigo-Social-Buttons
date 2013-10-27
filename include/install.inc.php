@@ -41,6 +41,10 @@ function socialbutt_install()
         'type' => 'interactive',
         'community' => null,
         ),
+      'linkedin' => array(
+        'enabled' => true,
+        'counter' => 'right',
+        ),
       );
     
     if (isset($conf['TumblrShare']))
@@ -84,6 +88,14 @@ function socialbutt_install()
         'enabled' => false,
         'type' => 'interactive',
         'community' => null,
+        );
+    }
+    
+    if (empty($new_conf['linkedin']))
+    {
+      $new_conf['linkedin'] = array(
+        'enabled' => false,
+        'counter' => 'right',
         );
     }
     

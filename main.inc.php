@@ -171,6 +171,11 @@ function socialbutt_add_button()
     include_once(SOCIALBUTT_PATH . 'include/reddit.inc.php');
     socialbutt_reddit($basename, $root_url, $tpl_vars, $buttons);
   }
+  if ($conf['SocialButtons']['linkedin']['enabled'])
+  {
+    include_once(SOCIALBUTT_PATH . 'include/linkedin.inc.php');
+    socialbutt_linkedin($basename, $root_url, $tpl_vars, $buttons);
+  }
   
   unset_make_full_url();
   

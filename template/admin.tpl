@@ -377,6 +377,31 @@ jQuery(".showInfo").tipTip({
 </table>
 </div> {* <!-- pinterest --> *}
 
+<div class="socialbutt {if not $linkedin.enabled}disabled{else}enabled{/if}"> {* <!-- linkedin --> *}
+<table>
+  <thead>
+    <tr><td colspan="2">
+      <label title="{if $linkedin.enabled}{'Disable'|@translate}{else}{'Enable'|@translate}{/if}">
+        <img src="{$SOCIALBUTT_PATH}template/images/linkedin_logo.png"/>
+        <input class="enable" style="display:none;" type="checkbox" name="linkedin[enabled]" {if $linkedin.enabled}checked="checked"{/if}/>
+      </label>
+    </td></tr>
+  </thead>
+  <tbody>
+    <tr class="property not-light">
+      <td>
+        {'Annotation'|@translate}
+      </td>
+      <td>
+        <label><input type="radio" name="linkedin[counter]" value="none" {if $linkedin.counter=='none'}checked="checked"{/if}/> {'None'|@translate}</label><br>
+        <label><input type="radio" name="linkedin[counter]" value="right" {if $linkedin.counter=='right'}checked="checked"{/if}/> {'Right bubble'|@translate}</label><br>
+        <label><input type="radio" name="linkedin[counter]" value="top" {if $linkedin.counter=='top'}checked="checked"{/if}/> {'Top bubble'|@translate}</label>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div> {* <!-- linkedin --> *}
+
 <br>
 
 <div class="submit">

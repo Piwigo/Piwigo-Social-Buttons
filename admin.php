@@ -42,6 +42,10 @@ if (isset($_POST['submit']))
       'type' => $_POST['reddit']['type'],
       'community' => $_POST['reddit']['community'],
       ),
+    'linkedin' => array(
+      'enabled' => isset($_POST['linkedin']['enabled']),
+      'counter' => $_POST['linkedin']['counter'],
+      ),
     );
   
   conf_update_param('SocialButtons', serialize($conf['SocialButtons']));
