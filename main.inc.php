@@ -95,8 +95,8 @@ function socialbutt_add_button()
 {
   global $conf, $template, $picture;
   
-  $basename = script_basename();
   set_make_full_url();
+  $basename = script_basename();
   $root_url = get_absolute_root_url();
   
   if ($basename == 'picture')
@@ -140,41 +140,15 @@ function socialbutt_add_button()
   
   
   $buttons = array();
+  $services = array('google', 'twitter', 'facebook', 'tumblr', 'pinterest', 'reddit', 'linkedin');
   
-  if ($conf['SocialButtons']['google']['enabled'])
+  foreach ($services as $service)
   {
-    include_once(SOCIALBUTT_PATH . 'include/google.inc.php');
-    socialbutt_google($basename, $root_url, $tpl_vars, $buttons);
-  }
-  if ($conf['SocialButtons']['twitter']['enabled'])
-  {
-    include_once(SOCIALBUTT_PATH . 'include/twitter.inc.php');
-    socialbutt_twitter($basename, $root_url, $tpl_vars, $buttons);
-  }
-  if ($conf['SocialButtons']['facebook']['enabled'])
-  {
-    include_once(SOCIALBUTT_PATH . 'include/facebook.inc.php');
-    socialbutt_facebook($basename, $root_url, $tpl_vars, $buttons);
-  }
-  if ($conf['SocialButtons']['tumblr']['enabled'])
-  {
-    include_once(SOCIALBUTT_PATH . 'include/tumblr.inc.php');
-    socialbutt_tumblr($basename, $root_url, $tpl_vars, $buttons);
-  }
-  if ($conf['SocialButtons']['pinterest']['enabled'] and $basename=='picture')
-  {
-    include_once(SOCIALBUTT_PATH . 'include/pinterest.inc.php');
-    socialbutt_pinterest($basename, $root_url, $tpl_vars, $buttons);
-  }
-  if ($conf['SocialButtons']['reddit']['enabled'])
-  {
-    include_once(SOCIALBUTT_PATH . 'include/reddit.inc.php');
-    socialbutt_reddit($basename, $root_url, $tpl_vars, $buttons);
-  }
-  if ($conf['SocialButtons']['linkedin']['enabled'])
-  {
-    include_once(SOCIALBUTT_PATH . 'include/linkedin.inc.php');
-    socialbutt_linkedin($basename, $root_url, $tpl_vars, $buttons);
+    if ($conf['SocialButtons'][$service]['enabled'])
+    {
+      include_once(SOCIALBUTT_PATH . 'include/'. $service .'.inc.php');
+      call_user_func_array('socialbutt_'.$service, array($basename, $root_url, &$tpl_vars, &$buttons));
+    }
   }
   
   unset_make_full_url();
