@@ -27,12 +27,13 @@ $lang['Top'] = 'Sus';
 $lang['Annotation'] = 'Adnotare';
 $lang['Bubble'] = 'Balon';
 $lang['Inline text'] = 'Text în linie';
-$lang['Shared picture size'] = 'Dimensiunea imaginii distribuite';
-$lang['Via'] = 'Via';
 $lang['Button type'] = 'Tipul butonului';
 $lang['Right bubble'] = 'Balon dreapta';
 $lang['Top bubble'] = 'Balon sus';
 $lang['Display buttons'] = 'Afișează butoanele';
 $lang['on photo and album'] = 'pe fotografie și pe album';
 $lang['only on photo'] = 'numai pe fotografie';
+$lang['Light mode'] = 'Mod simplu';
+$lang['When light mode is activated no external script is loaded, it <b>speeds up the load of the page and disables user tracking</b> but also disables annotations and in-page popups.'] = 'Când modul simplu este activat, niciun script extern nu este încărcat. Aceasta <b>crește viteza de încărcare a paginii și dezactivează monitorizarea utilizatorilor</b>, dar dezactivează de asemenea adnotările și popup-urile din pagină.';
+$lang['Community'] = 'Comunitate';
 ?>
