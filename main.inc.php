@@ -10,12 +10,10 @@ Author URI: http://www.strangeplanet.fr
 
 defined('PHPWG_ROOT_PATH') or die('Hacking attempt!');
 
-global $prefixeTable;
-
 // +-----------------------------------------------------------------------+
 // | Define plugin constants                                               |
 // +-----------------------------------------------------------------------+
-defined('SOCIALBUTT_ID') or define('SOCIALBUTT_ID', basename(dirname(__FILE__)));
+define('SOCIALBUTT_ID',      basename(dirname(__FILE__)));
 define('SOCIALBUTT_PATH' ,   PHPWG_PLUGINS_PATH . SOCIALBUTT_ID . '/');
 define('SOCIALBUTT_ADMIN',   get_root_url() . 'admin.php?page=plugin-' . SOCIALBUTT_ID);
 define('SOCIALBUTT_VERSION', 'auto');
@@ -33,10 +31,10 @@ if (defined('IN_ADMIN'))
   
   function socialbutt_admin_plugin_menu_links($menu) 
   {
-    array_push($menu, array(
+    $menu[] = array(
       'NAME' => 'Social Buttons',
       'URL' => SOCIALBUTT_ADMIN,
-    ));
+      );
     return $menu;
   }
 }
@@ -53,37 +51,11 @@ else
 function socialbutt_init()
 {
   global $conf, $pwg_loaded_plugins;
-  
-  // apply upgrade if needed
-  if (
-    SOCIALBUTT_VERSION == 'auto' or
-    $pwg_loaded_plugins[SOCIALBUTT_ID]['version'] == 'auto' or
-    version_compare($pwg_loaded_plugins[SOCIALBUTT_ID]['version'], SOCIALBUTT_VERSION, '<')
-  )
-  {
-    // call install function
-    include_once(SOCIALBUTT_PATH . 'include/install.inc.php');
-    socialbutt_install();
-    
-    // update plugin version in database
-    if ( $pwg_loaded_plugins[SOCIALBUTT_ID]['version'] != 'auto' and SOCIALBUTT_VERSION != 'auto' )
-    {
-      $query = '
-UPDATE '. PLUGINS_TABLE .'
-SET version = "'. SOCIALBUTT_VERSION .'"
-WHERE id = "'. SOCIALBUTT_ID .'"';
-      pwg_query($query);
-      
-      $pwg_loaded_plugins[SOCIALBUTT_ID]['version'] = SOCIALBUTT_VERSION;
-      
-      if (defined('IN_ADMIN'))
-      {
-        $_SESSION['page_infos'][] = 'Social Buttons updated to version '. SOCIALBUTT_VERSION;
-      }
-    }
-  }
-  
-  // prepare plugin configuration
+
+  include_once(SOCIALBUTT_PATH . 'maintain.inc.php');
+  $maintain = new SocialButtons_maintain(SOCIALBUTT_ID);
+  $maintain->autoUpdate(SOCIALBUTT_VERSION, 'install');
+
   $conf['SocialButtons'] = unserialize($conf['SocialButtons']);
 }
 
@@ -146,6 +118,10 @@ function socialbutt_add_button()
   {
     if ($conf['SocialButtons'][$service]['enabled'])
     {
+      if ($service=='pinterest' && $basename!='picture')
+      {
+        continue;
+      }
       include_once(SOCIALBUTT_PATH . 'include/'. $service .'.inc.php');
       call_user_func_array('socialbutt_'.$service, array($basename, $root_url, &$tpl_vars, &$buttons));
     }

@@ -30,7 +30,6 @@ if (isset($_POST['submit']))
       ),
     'facebook' => array(
       'enabled' => isset($_POST['facebook']['enabled']),
-      'color' => $_POST['facebook']['color'],
       'layout' => $_POST['facebook']['layout'],
       ),
     'pinterest' => array(
@@ -49,7 +48,7 @@ if (isset($_POST['submit']))
     );
   
   conf_update_param('SocialButtons', serialize($conf['SocialButtons']));
-  array_push($page['infos'], l10n('Information data registered in database'));
+  $page['infos'][] = l10n('Information data registered in database');
   
   // the prefilter changes, we must delete compiled templatess
   $template->delete_compiled_templates();
