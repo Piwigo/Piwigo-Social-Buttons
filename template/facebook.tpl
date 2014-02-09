@@ -7,7 +7,7 @@
     &p[summary]={$CONTENT_DESCRIPTION|cat:$SOCIALBUTT.copyright|urlencode}"
   {/if}
     onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=500');return false;" target="_blank" rel="nofollow">
-    <img src="{$ROOT_PATH}{$SOCIALBUTT_PATH}template/images/facebook.png" alt="Facebook"></a>
+    <img src="{$ROOT_URL}{$SOCIALBUTT_PATH}template/images/facebook.png" alt="Facebook"></a>
 {else}
   {footer_script require='jquery'}jQuery('body').prepend('<div id="fb-root"></div>');{/footer_script}
   {combine_script id='facebook_jssdk' load='footer' path='https://connect.facebook.net/'|cat:$SOCIALBUTT.FACEBOOK.lang|cat:'/all.js#xfbml=1'}

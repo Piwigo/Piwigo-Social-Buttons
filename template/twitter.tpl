@@ -7,5 +7,5 @@
   data-size="{$SOCIALBUTT.TWITTER.size}" data-count="{$SOCIALBUTT.TWITTER.count}" class="twitter-share-button" rel="nofollow"
   {combine_script id='twitter_widgets' load='footer' path='https://platform.twitter.com/widgets.js'}
 {/if}
-><img src="{$ROOT_PATH}{$SOCIALBUTT_PATH}template/images/twitter_{$SOCIALBUTT.TWITTER.size}.png" alt="Twitter"></a>
+><img src="{$ROOT_URL}{$SOCIALBUTT_PATH}template/images/twitter_{$SOCIALBUTT.TWITTER.size}.png" alt="Twitter"></a>
 {/strip}
