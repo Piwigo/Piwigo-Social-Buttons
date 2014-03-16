@@ -27,12 +27,13 @@ $lang['Top'] = 'Superior';
 $lang['Annotation'] = 'Anotació';
 $lang['Bubble'] = 'Bombolla';
 $lang['Inline text'] = 'Text en línia';
-$lang['Shared picture size'] = 'Mida de les imatges compartides';
-$lang['Via'] = 'Via';
 $lang['Button type'] = 'Tipus de botó';
 $lang['Right bubble'] = 'Bombolla dreta';
 $lang['Top bubble'] = 'Bombolla superior';
 $lang['Display buttons'] = 'Mostra els botons';
 $lang['on photo and album'] = 'sobre la foto i l\'àlbum';
 $lang['only on photo'] = 'nomes sobre la foto';
+$lang['Community'] = 'Comunitat';
+$lang['Light mode'] = 'Mode lleuger';
+$lang['When light mode is activated no external script is loaded, it <b>speeds up the load of the page and disables user tracking</b> but also disables annotations and in-page popups.'] = 'Quan s\'activa el mode lleuger no es carrega cap script extern. <b>Fa més ràpida la carrega de la pàgina ja que deshabilita el seguiment de l\'usuari</b> però també deshabilita les anotacions i les finestres emergents de les pàgines.';
 ?>
