@@ -35,12 +35,12 @@ class SocialButtons_maintain extends PluginMaintain
       'layout' => 'horizontal',
       ),
     'reddit' => array(
-      'enabled' => true,
+      'enabled' => false,
       'type' => 'interactive',
       'community' => null,
       ),
     'linkedin' => array(
-      'enabled' => true,
+      'enabled' => false,
       'counter' => 'right',
       ),
     );
