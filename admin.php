@@ -47,7 +47,7 @@ if (isset($_POST['submit']))
       ),
     );
   
-  conf_update_param('SocialButtons', serialize($conf['SocialButtons']));
+  conf_update_param('SocialButtons', $conf['SocialButtons']);
   $page['infos'][] = l10n('Information data registered in database');
   
   // the prefilter changes, we must delete compiled templatess
@@ -63,5 +63,3 @@ $template->assign(array(
 
 $template->set_filename('socialbutt_content', realpath(SOCIALBUTT_PATH . 'template/admin.tpl'));
 $template->assign_var_from_handle('ADMIN_CONTENT', 'socialbutt_content');
-
-?>

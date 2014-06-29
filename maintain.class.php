@@ -3,8 +3,6 @@ defined('PHPWG_ROOT_PATH') or die('Hacking attempt!');
 
 class SocialButtons_maintain extends PluginMaintain
 {
-  private $installed = false;
-  
   private $default_config = array(
     'position' => 'toolbar',
     'on_index' => true,
@@ -51,30 +49,29 @@ class SocialButtons_maintain extends PluginMaintain
     {
       if (isset($conf['TumblrShare']))
       {
-        $temp = is_string($conf['TumblrShare']) ? unserialize($conf['TumblrShare']) : $conf['TumblrShare'];
+        $temp = safe_unserialize($conf['TumblrShare']);
         if (!empty($temp['type']))      $this->default_config['tumblr']['type'] = $temp['type'];
         if (!empty($temp['img_size']))  $this->default_config['img_size'] =       $temp['img_size'];
       }
       if (isset($conf['TweetThis']))
       {
-        $temp = is_string($conf['TweetThis']) ? unserialize($conf['TweetThis']) : $conf['TweetThis'];
+        $temp = safe_unserialize($conf['TweetThis']);
         if (!empty($temp['type']))  $this->default_config['twitter']['size'] =  $temp['size'];
         if (!empty($temp['count'])) $this->default_config['twitter']['count'] = $temp['count'] ? 'bubble' : 'none';
         if (!empty($temp['via']))   $this->default_config['twitter']['via'] =   $temp['via'];
       }
       if (isset($conf['GooglePlusOne']))
       {
-        $temp = is_string($conf['GooglePlusOne']) ? unserialize($conf['GooglePlusOne']) : $conf['GooglePlusOne'];
+        $temp = safe_unserialize($conf['GooglePlusOne']);
         if (!empty($temp['size']))        $this->default_config['google']['size'] =       $temp['size'];
         if (!empty($temp['annotation']))  $this->default_config['google']['annotation'] = $temp['annotation'];
       }
       
-      $conf['SocialButtons'] = serialize($this->default_config);
-      conf_update_param('SocialButtons', $conf['SocialButtons']);
+      conf_update_param('SocialButtons', $this->default_config, true);
     }
     else
     {
-      $new_conf = is_string($conf['SocialButtons']) ? unserialize($conf['SocialButtons']) : $conf['SocialButtons'];
+      $new_conf = safe_unserialize($conf['SocialButtons']);
       
       if (empty($new_conf['pinterest']))
       {
@@ -122,23 +119,13 @@ class SocialButtons_maintain extends PluginMaintain
         unset($new_conf['tumblr']['img_size'], $new_conf['pinterest']['img_size']);
       }
       
-      $conf['SocialButtons'] = serialize($new_conf);
-      conf_update_param('SocialButtons', $conf['SocialButtons']);
-    }
-
-    $this->installed = true;
-  }
-
-  function activate($plugin_version, &$errors=array())
-  {
-    if (!$this->installed)
-    {
-      $this->install($plugin_version, $errors);
+      conf_update_param('SocialButtons', $new_conf, true);
     }
   }
 
-  function deactivate()
+  function update($old_version, $new_version, &$errors=array())
   {
+    $this->install($new_version, $errors);
   }
 
   function uninstall()
@@ -146,5 +133,3 @@ class SocialButtons_maintain extends PluginMaintain
     conf_delete_param('SocialButtons');
   }
 }
-
-?>

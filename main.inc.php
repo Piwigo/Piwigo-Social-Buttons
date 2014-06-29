@@ -10,20 +10,15 @@ Author URI: http://www.strangeplanet.fr
 
 defined('PHPWG_ROOT_PATH') or die('Hacking attempt!');
 
-// +-----------------------------------------------------------------------+
-// | Define plugin constants                                               |
-// +-----------------------------------------------------------------------+
-define('SOCIALBUTT_ID',      basename(dirname(__FILE__)));
-define('SOCIALBUTT_PATH' ,   PHPWG_PLUGINS_PATH . SOCIALBUTT_ID . '/');
-define('SOCIALBUTT_ADMIN',   get_root_url() . 'admin.php?page=plugin-' . SOCIALBUTT_ID);
-define('SOCIALBUTT_VERSION', 'auto');
+global $conf;
+
+define('SOCIALBUTT_ID',    basename(dirname(__FILE__)));
+define('SOCIALBUTT_PATH' , PHPWG_PLUGINS_PATH . SOCIALBUTT_ID . '/');
+define('SOCIALBUTT_ADMIN', get_root_url() . 'admin.php?page=plugin-' . SOCIALBUTT_ID);
 
 
-// +-----------------------------------------------------------------------+
-// | Add event handlers                                                    |
-// +-----------------------------------------------------------------------+
-// init the plugin
-add_event_handler('init', 'socialbutt_init');
+$conf['SocialButtons'] = safe_unserialize($conf['SocialButtons']);
+
 
 if (defined('IN_ADMIN'))
 {
@@ -42,21 +37,6 @@ else
 {
   add_event_handler('loc_end_picture', 'socialbutt_add_button');
   add_event_handler('loc_end_index', 'socialbutt_add_button');
-}
-
-
-/**
- * plugin initialization
- */
-function socialbutt_init()
-{
-  global $conf, $pwg_loaded_plugins;
-
-  include_once(SOCIALBUTT_PATH . 'maintain.inc.php');
-  $maintain = new SocialButtons_maintain(SOCIALBUTT_ID);
-  $maintain->autoUpdate(SOCIALBUTT_VERSION, 'install');
-
-  $conf['SocialButtons'] = unserialize($conf['SocialButtons']);
 }
 
 
@@ -185,5 +165,3 @@ function socialbutt_add_button_prefilter($content)
 
   return str_replace($search, $search.$add, $content);
 }
-
-?>
