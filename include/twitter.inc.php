@@ -32,5 +32,3 @@ function socialbutt_twitter($basename, $root_url, &$tpl_vars, &$buttons)
   $template->set_filename('twitter_button', realpath(SOCIALBUTT_PATH .'template/twitter.tpl'));
   $buttons[] = 'twitter_button';
 }
-
-?>

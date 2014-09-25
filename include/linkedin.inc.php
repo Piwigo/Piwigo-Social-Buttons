@@ -38,5 +38,3 @@ function socialbutt_linkedin($basename, $root_url, &$tpl_vars, &$buttons)
   $template->set_filename('linkedin_button', realpath(SOCIALBUTT_PATH .'template/linkedin.tpl'));
   $buttons[] = 'linkedin_button';
 }
-
-?>

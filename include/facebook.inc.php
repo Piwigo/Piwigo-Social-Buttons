@@ -43,5 +43,3 @@ function socialbutt_facebook($basename, $root_url, &$tpl_vars, &$buttons)
   $template->set_filename('facebook_button', realpath(SOCIALBUTT_PATH .'template/facebook.tpl'));
   $buttons[] = 'facebook_button';
 }
-
-?>

@@ -41,5 +41,3 @@ function socialbutt_reddit($basename, $root_url, &$tpl_vars, &$buttons)
   $template->set_filename('reddit_button', realpath(SOCIALBUTT_PATH .'template/reddit.tpl'));
   $buttons[] = 'reddit_button';
 }
-
-?>

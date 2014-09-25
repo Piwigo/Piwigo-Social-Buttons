@@ -17,5 +17,3 @@ function socialbutt_pinterest($basename, $root_url, &$tpl_vars, &$buttons)
   $template->set_filename('pinterest_button', realpath(SOCIALBUTT_PATH .'template/pinterest.tpl'));
   $buttons[] = 'pinterest_button';
 }
-
-?>

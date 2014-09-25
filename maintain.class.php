@@ -45,6 +45,8 @@ class SocialButtons_maintain extends PluginMaintain
 
   function install($plugin_version, &$errors=array())
   {
+    global $conf;
+
     if (empty($conf['SocialButtons']))
     {
       if (isset($conf['TumblrShare']))
@@ -66,13 +68,13 @@ class SocialButtons_maintain extends PluginMaintain
         if (!empty($temp['size']))        $this->default_config['google']['size'] =       $temp['size'];
         if (!empty($temp['annotation']))  $this->default_config['google']['annotation'] = $temp['annotation'];
       }
-      
+
       conf_update_param('SocialButtons', $this->default_config, true);
     }
     else
     {
       $new_conf = safe_unserialize($conf['SocialButtons']);
-      
+
       if (empty($new_conf['pinterest']))
       {
         $new_conf['pinterest'] = array(
@@ -80,7 +82,7 @@ class SocialButtons_maintain extends PluginMaintain
           'layout' => 'horizontal',
           );
       }
-      
+
       if (empty($new_conf['reddit']))
       {
         $new_conf['reddit'] = array(
@@ -89,7 +91,7 @@ class SocialButtons_maintain extends PluginMaintain
           'community' => null,
           );
       }
-      
+
       if (empty($new_conf['linkedin']))
       {
         $new_conf['linkedin'] = array(
@@ -97,28 +99,28 @@ class SocialButtons_maintain extends PluginMaintain
           'counter' => 'right',
           );
       }
-      
+
       if (!isset($new_conf['on_index']))
       {
         $new_conf['on_index'] = true;
       }
-      
+
       if ($new_conf['facebook']['layout'] == 'none')
       {
         $new_conf['facebook']['layout'] = 'button_count';
       }
-      
+
       if (!isset($new_conf['light']))
       {
         $new_conf['light'] = false;
       }
-      
+
       if (!isset($new_conf['img_size']))
       {
         $new_conf['img_size'] = isset($new_conf['tumblr']['img_size']) ? $new_conf['tumblr']['img_size'] : 'Original';
         unset($new_conf['tumblr']['img_size'], $new_conf['pinterest']['img_size']);
       }
-      
+
       conf_update_param('SocialButtons', $new_conf, true);
     }
   }

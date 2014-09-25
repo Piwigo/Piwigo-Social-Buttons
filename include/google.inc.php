@@ -44,5 +44,3 @@ function socialbutt_google($basename, $root_url, &$tpl_vars, &$buttons)
   $template->set_filename('google_button', realpath(SOCIALBUTT_PATH .'template/google.tpl'));
   $buttons[] = 'google_button';
 }
-
-?>

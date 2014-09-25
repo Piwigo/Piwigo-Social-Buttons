@@ -1,5 +1,5 @@
 <?php
-if (!defined('SOCIALBUTT_PATH')) die('Hacking attempt!');
+defined('SOCIALBUTT_PATH') or die('Hacking attempt!');
 
 global $conf, $template, $page;
 

@@ -11,5 +11,3 @@ function socialbutt_tumblr($basename, $root_url, &$tpl_vars, &$buttons)
   $template->set_filename('tumblr_button', realpath(SOCIALBUTT_PATH .'template/tumblr.tpl'));
   $buttons[] = 'tumblr_button';
 }
-
-?>
