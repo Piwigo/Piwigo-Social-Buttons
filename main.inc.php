@@ -10,11 +10,21 @@ Author URI: http://www.strangeplanet.fr
 
 defined('PHPWG_ROOT_PATH') or die('Hacking attempt!');
 
+if (basename(dirname(__FILE__)) != 'SocialButtons')
+{
+  add_event_handler('init', 'socialbutt_error');
+  function socialbutt_error()
+  {
+    global $page;
+    $page['errors'][] = 'Social Buttons folder name is incorrect, uninstall the plugin and rename it to "SocialButtons"';
+  }
+  return;
+}
+
 global $conf;
 
-define('SOCIALBUTT_ID',    basename(dirname(__FILE__)));
-define('SOCIALBUTT_PATH' , PHPWG_PLUGINS_PATH . SOCIALBUTT_ID . '/');
-define('SOCIALBUTT_ADMIN', get_root_url() . 'admin.php?page=plugin-' . SOCIALBUTT_ID);
+define('SOCIALBUTT_PATH' , PHPWG_PLUGINS_PATH . 'SocialButtons/');
+define('SOCIALBUTT_ADMIN', get_root_url() . 'admin.php?page=plugin-SocialButtons');
 
 
 $conf['SocialButtons'] = safe_unserialize($conf['SocialButtons']);
