@@ -269,42 +269,42 @@ jQuery(".showInfo").tipTip({
     </tr>
     <tr class="button">
       <td><label>
-        <img src="http://platform.tumblr.com/v1/share_1.png"/>
+        <img src="https://platform.tumblr.com/v1/share_1.png"/>
         <input type="radio" name="tumblr[type]" value="share_1" {if $tumblr.type=='share_1'}checked="checked"{/if}/>
       </label></td>
       <td><label>
         <input type="radio" name="tumblr[type]" value="share_1T" {if $tumblr.type=='share_1T'}checked="checked"{/if}/>
-        <img src="http://platform.tumblr.com/v1/share_1T.png"/>
+        <img src="https://platform.tumblr.com/v1/share_1T.png"/>
       </label></td>
     </tr>
     <tr class="button">
       <td><label>
-        <img src="http://platform.tumblr.com/v1/share_2.png"/>
+        <img src="https://platform.tumblr.com/v1/share_2.png"/>
         <input type="radio" name="tumblr[type]" value="share_2" {if $tumblr.type=='share_2'}checked="checked"{/if}/>
       </label></td>
       <td><label>
         <input type="radio" name="tumblr[type]" value="share_2T" {if $tumblr.type=='share_2T'}checked="checked"{/if}/>
-        <img src="http://platform.tumblr.com/v1/share_2T.png"/>
+        <img src="https://platform.tumblr.com/v1/share_2T.png"/>
       </label></td>
     </tr>
     <tr class="button">
       <td><label>
-        <img src="http://platform.tumblr.com/v1/share_3.png"/>
+        <img src="https://platform.tumblr.com/v1/share_3.png"/>
         <input type="radio" name="tumblr[type]" value="share_3" {if $tumblr.type=='share_3'}checked="checked"{/if}/>
       </label></td>
       <td><label>
         <input type="radio" name="tumblr[type]" value="share_3T" {if $tumblr.type=='share_3T'}checked="checked"{/if}/>
-        <img src="http://platform.tumblr.com/v1/share_3T.png"/>
+        <img src="https://platform.tumblr.com/v1/share_3T.png"/>
       </label></td>
     </tr>
     <tr class="button">
       <td><label>
-        <img src="http://platform.tumblr.com/v1/share_4.png"/>
+        <img src="https://platform.tumblr.com/v1/share_4.png"/>
         <input type="radio" name="tumblr[type]" value="share_4" {if $tumblr.type=='share_4'}checked="checked"{/if}/>
       </label></td>
       <td><label>
         <input type="radio" name="tumblr[type]" value="share_4T" {if $tumblr.type=='share_4T'}checked="checked"{/if}/>
-        <img src="http://platform.tumblr.com/v1/share_4T.png"/>
+        <img src="https://platform.tumblr.com/v1/share_4T.png"/>
       </label></td>
     </tr>
   </tbody>
