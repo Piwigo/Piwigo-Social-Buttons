@@ -33,4 +33,5 @@ $lang['Right bubble'] = 'รูปแบบฟองด้านขวา';
 $lang['Top bubble'] = 'รูปแบบฟองด้านบน';
 $lang['on photo and album'] = 'ทั้งในภาพและอัลบั้ม';
 $lang['only on photo'] = 'เฉพาะในภาพ';
-?>
+$lang['Community'] = 'ชุมชน';
+$lang['Light mode'] = 'โหมดง่าย';
