@@ -2,9 +2,9 @@
 
 {html_style}
 .socialbutt.disabled thead img {
-  -webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
-  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='saturate' values='0'/></filter></svg>#grayscale"); /* Firefox 10+ */
-  filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(100%);
+  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='saturate' values='0'/></filter></svg>#grayscale");
+  filter: gray;
 }
 {if $light}
 .not-light { display:none; }
