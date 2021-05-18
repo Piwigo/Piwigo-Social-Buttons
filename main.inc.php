@@ -2,10 +2,10 @@
 /*
 Plugin Name: Social Buttons
 Version: auto
-Description: Sharing functions for Facebook, Twitter and Tumblr
+Description: Plugin forked Sharing functions for Facebook, Twitter and Tumblr
 Plugin URI: auto
-Author: Mistic
-Author URI: http://www.strangeplanet.fr
+Author:
+Author URI:
 */
 
 defined('PHPWG_ROOT_PATH') or die('Hacking attempt!');
