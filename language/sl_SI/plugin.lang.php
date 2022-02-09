@@ -21,3 +21,4 @@ $lang['Toolbar'] = 'Orodna vrstica';
 $lang['Bottom'] = 'Dno';
 $lang['Top'] = 'Vrh';
 $lang['Button position on picture page'] = 'Položaj gumbov na strani s sliko';
+$lang['Shared picture size'] = 'Skupna velikost slike';
