@@ -5,8 +5,7 @@
     <img src="{$ROOT_URL}{$SOCIALBUTT_PATH}template/images/facebook.png" alt="Facebook"></a>
 {else}
   {footer_script require='jquery'}jQuery('body').prepend('<div id="fb-root"></div>');{/footer_script}
-  {combine_script id='facebook_jssdk' load='footer' path='https://connect.facebook.net/'|cat:$SOCIALBUTT.FACEBOOK.lang|cat:'/all.js#xfbml=1'}
-  <div style="display:inline-block;" class="fb-like" data-send="false" data-show-faces="false" 
-    data-href="{$SOCIALBUTT.share_url}" data-layout="{$SOCIALBUTT.FACEBOOK.layout}"></div>
+  {combine_script id='facebook_jssdk' load='footer' path='https://connect.facebook.net/'|cat:$SOCIALBUTT.FACEBOOK.lang|cat:'/sdk.js#xfbml=1&version=v12.0" nonce="7dWKrx1N"'}
+    <div class="fb-share-button" data-href="{$SOCIALBUTT.share_url}" data-layout="button_count"></div> {* Does not work with 'localhost/...' urls*}
 {/if}
 {/strip}
