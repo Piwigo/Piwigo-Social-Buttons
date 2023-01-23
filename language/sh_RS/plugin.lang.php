@@ -24,5 +24,15 @@ $lang['Bottom'] = 'Dno';
 $lang['Button position on picture page'] = 'Donja pozicija na strani sa slikama';
 $lang['Toolbar'] = 'Traka sa alatima';
 $lang['Top'] = 'Vrh';
-$lang['Shared picture size'] = 'Zdielan� velkost fotky';
-?>
+$lang['Annotation'] = 'Прибелешке';
+$lang['Bubble'] = 'Балон';
+$lang['Button type'] = 'Врста дугмета';
+$lang['Community'] = 'Заједница';
+$lang['Display buttons'] = 'Прикажи дугмиће';
+$lang['Inline text'] = 'Текст у редовима';
+$lang['Light mode'] = 'Лагани режим';
+$lang['Right bubble'] = 'Балон на десној страни';
+$lang['Top bubble'] = 'Балон изнад';
+$lang['When light mode is activated no external script is loaded, it <b>speeds up the load of the page and disables user tracking</b> but also disables annotations and in-page popups.'] = 'Када је омогућен лагани режим ни једна спољна скрипта неће бити учитана, а то ће <b>убрзати учитавње странице и онемогућити праћење корисника</b>, али ће онемогућити прибелешке и искачуће прозорчиће.';
+$lang['on photo and album'] = 'на фотографији и албуму';
+$lang['only on photo'] = 'само на фотографији';
