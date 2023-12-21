@@ -15,4 +15,8 @@ $lang['only on photo'] = 'only on photo';
 $lang['Community'] = 'Community';
 $lang['Light mode'] = 'Light mode';
 $lang['When light mode is activated no external script is loaded, it <b>speeds up the load of the page and disables user tracking</b> but also disables annotations and in-page popups.'] = 'When light mode is activated no external script is loaded, it <b>speeds up the load of the page and disables user tracking</b> but also disables annotations and in-page popups.';
+$lang['Disable'] = 'Disable';
+$lang['Enable'] = 'Enable';
+$lang['Via'] = 'Via';
+$lang['Shared picture size'] = 'Shared picture size';
 ?>

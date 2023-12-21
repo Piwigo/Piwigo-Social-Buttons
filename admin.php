@@ -54,11 +54,13 @@ if (isset($_POST['submit']))
   $template->delete_compiled_templates();
 }
 
+$img_sizes = array_merge(ImageStdParams::get_all_types(), array('Original'));
 
 $template->assign($conf['SocialButtons']);
 $template->assign(array(
   'SOCIALBUTT_PATH' => SOCIALBUTT_PATH,
-  'img_sizes' => array_merge(ImageStdParams::get_all_types(), array('Original')),
+  'img_sizes' => $img_sizes,
+  'img_sizes_labels' => array_map('l10n', $img_sizes),
   ));
 
 $template->set_filename('socialbutt_content', realpath(SOCIALBUTT_PATH . 'template/admin.tpl'));
