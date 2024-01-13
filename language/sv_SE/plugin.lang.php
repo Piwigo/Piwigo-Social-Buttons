@@ -38,4 +38,6 @@ $lang['only on photo'] = 'endast på bild';
 $lang['Community'] = 'Gemensamhet';
 $lang['Light mode'] = 'Bantat läge';
 $lang['When light mode is activated no external script is loaded, it <b>speeds up the load of the page and disables user tracking</b> but also disables annotations and in-page popups.'] = 'I bantat läge laddas inga externa skript in, det <b>snabbar upp sidladdningen och deaktiverar användarspårning</b> men tar också bort annotationer och pop-ups.';
-?>
+$lang['Disable'] = 'Avaktivera';
+$lang['Enable'] = 'Aktivera';
+$lang['Shared picture size'] = 'Delad bildstorlek';
