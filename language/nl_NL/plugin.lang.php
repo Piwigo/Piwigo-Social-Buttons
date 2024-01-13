@@ -15,3 +15,7 @@ $lang['Display buttons'] = 'Toon knoppen';
 $lang['Community'] = 'Gemeenschap';
 $lang['Light mode'] = 'light versie';
 $lang['When light mode is activated no external script is loaded, it <b>speeds up the load of the page and disables user tracking</b> but also disables annotations and in-page popups.'] = 'Als de light versie wordt geactiveerd, wordt er geen extern script geladen. Dit <b>versnelt het laden van de pagina en schakelt het bijhouden van gebruikers-informatie uit</b>, maar schakelt ook het commentaarwolkje en in-pagina pop-ups uit.';
+$lang['Via'] = 'Via';
+$lang['Shared picture size'] = 'Gedeelde fotogrootte';
+$lang['Enable'] = 'Inschakelen';
+$lang['Disable'] = 'Uitzetten';
