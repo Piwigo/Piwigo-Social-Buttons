@@ -38,4 +38,5 @@ $lang['only on photo'] = 'ainult pildil';
 $lang['Community'] = 'Kogukond';
 $lang['Light mode'] = 'Kerge režhiim';
 $lang['When light mode is activated no external script is loaded, it <b>speeds up the load of the page and disables user tracking</b> but also disables annotations and in-page popups.'] = 'Kui kerge režhiim on aktiveeritud, siis väliseid koode ei käivitata. Antud lisa kiirendab lehe laadimist ja lülitab kasutajate jälgimise välja, lisaks veel lehesisesed hüpikaknad ja teated on välja lülitatud.';
-?>
+$lang['Disable'] = 'Keela';
+$lang['Enable'] = 'Luba';
