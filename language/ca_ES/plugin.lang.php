@@ -36,4 +36,7 @@ $lang['only on photo'] = 'nomes sobre la foto';
 $lang['Community'] = 'Comunitat';
 $lang['Light mode'] = 'Mode lleuger';
 $lang['When light mode is activated no external script is loaded, it <b>speeds up the load of the page and disables user tracking</b> but also disables annotations and in-page popups.'] = 'Quan s\'activa el mode lleuger no es carrega cap script extern. <b>Fa més ràpida la carrega de la pàgina ja que deshabilita el seguiment de l\'usuari</b> però també deshabilita les anotacions i les finestres emergents de les pàgines.';
-?>
+$lang['Disable'] = 'Inhabilitar';
+$lang['Enable'] = 'Habilitar';
+$lang['Shared picture size'] = 'Mida de la imatge compartida';
+$lang['Via'] = 'Via';
