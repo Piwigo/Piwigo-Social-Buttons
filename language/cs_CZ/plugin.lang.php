@@ -17,4 +17,5 @@ $lang['only on photo'] = 'Jen na fotce';
 $lang['Community'] = 'Komunita';
 $lang['Light mode'] = 'Snadný režim';
 $lang['When light mode is activated no external script is loaded, it <b>speeds up the load of the page and disables user tracking</b> but also disables annotations and in-page popups.'] = 'Když je aktivován Snadný režim, nenahraje se žádný externí skript,  <b>tato funkce zrychlý nahrávání stránky a zakáže sledování uživatelů</b> zároveň však zakáže poznámky a na stránkách vyskakování dalších oken.';
-?>
+$lang['Disable'] = 'Zakázat';
+$lang['Enable'] = 'Povolit';

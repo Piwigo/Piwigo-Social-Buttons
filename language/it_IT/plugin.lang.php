@@ -17,4 +17,5 @@ $lang['Display buttons'] = 'Mostra pulsanti';
 $lang['When light mode is activated no external script is loaded, it <b>speeds up the load of the page and disables user tracking</b> but also disables annotations and in-page popups.'] = 'Quando è attivata la modalità light nessuno script esterno viene caricato, si <b>accelera il caricamento della pagina e disabilita il tracciamento degli utenti</b>, ma disabilita anche annotazioni e finestre a comparsa.';
 $lang['Light mode'] = 'Modalità light';
 $lang['Community'] = 'Community';
-?>
+$lang['Disable'] = 'Attivare';
+$lang['Enable'] = 'Disattivare';

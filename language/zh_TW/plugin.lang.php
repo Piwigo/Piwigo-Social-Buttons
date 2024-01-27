@@ -36,4 +36,7 @@ $lang['only on photo'] = '只在圖片上';
 $lang['Community'] = '社區';
 $lang['Light mode'] = '輕量模式';
 $lang['When light mode is activated no external script is loaded, it <b>speeds up the load of the page and disables user tracking</b> but also disables annotations and in-page popups.'] = '當輕量模式啟動時，不會加載任何外部腳本，它<b>會提高頁面加載速度，同時也禁用了用戶信息追蹤</b>但同時也會禁用註解和內頁彈出框';
-?>
+$lang['Disable'] = '關閉';
+$lang['Enable'] = '開啟';
+$lang['Shared picture size'] = '分享照片的尺寸';
+$lang['Via'] = '經由';

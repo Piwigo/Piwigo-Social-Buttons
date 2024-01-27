@@ -38,4 +38,5 @@ $lang['only on photo'] = 'nur auf Foto';
 $lang['Community'] = 'Gemeinschaft';
 $lang['Light mode'] = 'Schnellmodus';
 $lang['When light mode is activated no external script is loaded, it <b>speeds up the load of the page and disables user tracking</b> but also disables annotations and in-page popups.'] = 'Wenn der Schnellmodus aktiviert is, wird kein externes Script geladen. <b>Das Laden der Seite wird beschleunigt und das Usertracking wird deaktiviert</b>. Ausserdem werden Kommentare und Popups auf der Seite unterdrückt.';
-?>
+$lang['Disable'] = 'Deaktivieren';
+$lang['Enable'] = 'Aktivieren';

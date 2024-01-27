@@ -38,4 +38,5 @@ $lang['only on photo'] = 'kun på fotografi';
 $lang['Community'] = 'Fællesskab';
 $lang['Light mode'] = 'Letvægtstilstand';
 $lang['When light mode is activated no external script is loaded, it <b>speeds up the load of the page and disables user tracking</b> but also disables annotations and in-page popups.'] = 'Når letvægtstilstand er aktiveret, indlæses der ingen eksterne scripts, hvilket <b>forøger hastigheden ved indlæsning af siden og deaktiverer brugersporing</b>, men det deaktiverer også noter og indlejrede popup\'er på siden.';
-?>
+$lang['Disable'] = 'Deaktiver';
+$lang['Enable'] = 'Aktiver';

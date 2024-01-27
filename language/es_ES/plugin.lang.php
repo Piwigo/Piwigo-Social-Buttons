@@ -17,4 +17,5 @@ $lang['only on photo'] = 'sólo en la foto';
 $lang['Community'] = 'Comunidad';
 $lang['Light mode'] = 'Modo ligero';
 $lang['When light mode is activated no external script is loaded, it <b>speeds up the load of the page and disables user tracking</b> but also disables annotations and in-page popups.'] = 'Cuando el modo ligero está activado no se carga ningún script externo, esto <b>acelera la carga de la página y desactiva  el seguimiento de usuarios</b> pero también desactiva las anotaciones y ventanas emergentes de la página.';
-?>
+$lang['Disable'] = 'Inhabilitar';
+$lang['Enable'] = 'Habilitar';

@@ -15,3 +15,7 @@ $lang['Display buttons'] = 'Zobraziť tlačidlá';
 $lang['When light mode is activated no external script is loaded, it <b>speeds up the load of the page and disables user tracking</b> but also disables annotations and in-page popups.'] = 'Pri zapnutí odľahčeného režimu sa nenačítava žiaden externý skript, to <b>urýchľuje načítanie stránky a deaktivuje sledovanie používateľov</b>, ale tiež vypína anotácie a vyskakovacie okná.';
 $lang['Light mode'] = 'Odľahčený režim';
 $lang['Community'] = 'Spoločnosť';
+$lang['Disable'] = 'Zakázať';
+$lang['Enable'] = 'Povoliť';
+$lang['Shared picture size'] = 'Spoločná veľkosť obrázku';
+$lang['Via'] = 'Cez';

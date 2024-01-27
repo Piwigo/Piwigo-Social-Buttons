@@ -78,7 +78,7 @@ jQuery(".showInfo").tipTip({
       {'Shared picture size'|translate}
     </td>
     <td>
-      {html_options name="img_size" values=$img_sizes output=$img_sizes|translate selected=$img_size}
+      {html_options name="img_size" values=$img_sizes output=$img_sizes_labels selected=$img_size}
     </td>
   </tr>
   <tr class="property">
