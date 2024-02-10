@@ -36,4 +36,7 @@ $lang['only on photo'] = 'apenas na foto';
 $lang['Community'] = 'Comunidade';
 $lang['Light mode'] = 'Modo simples';
 $lang['When light mode is activated no external script is loaded, it <b>speeds up the load of the page and disables user tracking</b> but also disables annotations and in-page popups.'] = 'Quando o modo simples é ativado nenhum script externo é carregado, ele <b> acelera o carregamento da página e desativa o rastreamento do utilizador </b>, mas também desativa as anotações e pop-ups.';
-?>
+$lang['Disable'] = 'Desativar';
+$lang['Enable'] = 'Ativar';
+$lang['Shared picture size'] = 'Tamanho da imagem compartilhada';
+$lang['Via'] = 'Através da';
