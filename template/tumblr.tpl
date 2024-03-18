@@ -1,7 +1,9 @@
 {strip}
 {if $SOCIALBUTT.basename=='picture'}
+  {if isset($related_tags)}
   {capture assign="inline_tags"}{foreach from=$related_tags item=tag name=tag_loop}{if !$smarty.foreach.tag_loop.first},{/if}{$tag.name}{/foreach}{/capture}
-  <a title="Share on tumblr" href="https://www.tumblr.com/share/photo?source={$SOCIALBUTT.source|urlencode}&caption={$PAGE_TITLE|cat:' '|cat:$SOCIALBUTT.copyright|urlencode}&clickthru={$SOCIALBUTT.share_url|urlencode}&tags={$inline_tags|urlencode}"
+  {/if}
+  <a title="Share on tumblr" href="https://www.tumblr.com/share/photo?source={$SOCIALBUTT.source|urlencode}&caption={$PAGE_TITLE|cat:' '|cat:$SOCIALBUTT.copyright|urlencode}&clickthru={$SOCIALBUTT.share_url|urlencode}{if isset($inline_tags)}&tags={$inline_tags|urlencode}{/if}"
 {else}
   <a title="Share on tumblr" href="https://www.tumblr.com/share/link?url={$SOCIALBUTT.share_url|urlencode}&name={$PAGE_TITLE|cat:' | '|cat:$GALLERY_TITLE|urlencode}&description={if isset($CONTENT_DESCRIPTION)}{$CONTENT_DESCRIPTION|urlencode}{/if}{$SOCIALBUTT.copyright|urlencode}"
 {/if}
