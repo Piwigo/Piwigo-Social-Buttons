@@ -2,7 +2,7 @@
 /*
 Plugin Name: Social Buttons
 Version: auto
-Description: Sharing functions for Facebook, Twitter, Google+ and Tumblr
+Description: Sharing functions for Facebook, Twitter and Tumblr
 Plugin URI: auto
 Author: Mistic
 Author URI: http://www.strangeplanet.fr
