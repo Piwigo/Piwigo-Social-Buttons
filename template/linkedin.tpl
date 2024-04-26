@@ -6,6 +6,6 @@
 {else}
   {combine_script id='linkedin_share' load='footer' path='https://platform.linkedin.com/in.js'}
   <script type="text/javascript">lang: '{$SOCIALBUTT.LINKEDIN.lang}'</script>
-  <script type="IN/Share" data-url="{$SOCIALBUTT.share_url}" data-counter="{$SOCIALBUTT.TWITTER.counter}" data-title="{$PAGE_TITLE|cat:' | '|cat:$GALLERY_TITLE}"></script>
+  <script type="IN/Share" data-url="{$SOCIALBUTT.share_url}"{if isset($SOCIALBUTT.TWITTER.counter)} data-counter="{$SOCIALBUTT.TWITTER.counter}"{/if} data-title="{$PAGE_TITLE|cat:' | '|cat:$GALLERY_TITLE}"></script>
 {/if}
 {/strip}
