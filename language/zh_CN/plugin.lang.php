@@ -38,4 +38,5 @@ $lang['only on photo'] = '只在图片';
 $lang['Community'] = '社区';
 $lang['Light mode'] = '轻量模式';
 $lang['When light mode is activated no external script is loaded, it <b>speeds up the load of the page and disables user tracking</b> but also disables annotations and in-page popups.'] = '当轻量模式激活时，没有加载任何外部脚本，它<b>会提高页面加载速度同时也禁用了用户信息追踪</b>但同时也会禁用了注解和内页弹出框';
-?>
+$lang['Disable'] = '禁用';
+$lang['Enable'] = '启用';
