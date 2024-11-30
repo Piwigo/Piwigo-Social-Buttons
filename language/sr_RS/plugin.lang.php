@@ -36,3 +36,7 @@ $lang['Top'] = 'Врх';
 $lang['Top bubble'] = 'Дугме на врху';
 $lang['on photo and album'] = 'на фотографији и албуму';
 $lang['only on photo'] = 'само на фотографији';
+$lang['Disable'] = 'Онемогући';
+$lang['Enable'] = 'Омогући';
+$lang['Shared picture size'] = 'Величина слике за дељење';
+$lang['Via'] = 'Преко';
