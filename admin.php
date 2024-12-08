@@ -19,11 +19,6 @@ if (isset($_POST['submit']))
       'count' => $_POST['twitter']['count'],
       'via' => trim($_POST['twitter']['via']),
       ),
-    'google' => array(
-      'enabled' => isset($_POST['google']['enabled']),
-      'size' => $_POST['google']['size'],
-      'annotation' => $_POST['google']['annotation'],
-      ),
     'tumblr' => array(
       'enabled' => isset($_POST['tumblr']['enabled']),
       'type' => $_POST['tumblr']['type'],
