@@ -8,7 +8,7 @@
   </script>
   <script type="text/javascript" src="https://{$SOCIALBUTT.REDDIT.lang}.reddit.com/static/button/button1.js"></script>
 {else}
-  <a title="Share on reddit" href="https://{$SOCIALBUTT.REDDIT.lang}.reddit.com/submit?url={$SOCIALBUTT.share_url|urlencode}&title={$PAGE_TITLE|cat:' | '|cat:$GALLERY_TITLE|urlencode}&target={$SOCIALBUTT.REDDIT.community|urlencode}" rel="nofollow" target="_blank">
+  <a title="Share on reddit" href="https://{$SOCIALBUTT.REDDIT.lang}.reddit.com/register?url={$SOCIALBUTT.share_url|urlencode}&title={$PAGE_TITLE|cat:' | '|cat:$GALLERY_TITLE|urlencode}&target={$SOCIALBUTT.REDDIT.community|urlencode}" rel="nofollow" target="_blank">
     <img src="https://www.reddit.com/static/{$SOCIALBUTT.REDDIT.type}.gif" alt="reddit"></a>
 {/if}
 {/strip}

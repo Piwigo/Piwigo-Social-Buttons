@@ -2,9 +2,9 @@
 
 {html_style}
 .socialbutt.disabled thead img {
-  -webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
-  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='saturate' values='0'/></filter></svg>#grayscale"); /* Firefox 10+ */
-  filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(100%);
+  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='saturate' values='0'/></filter></svg>#grayscale");
+  filter: gray;
 }
 {if $light}
 .not-light { display:none; }
@@ -144,56 +144,6 @@ jQuery(".showInfo").tipTip({
 </table>
 </div> {* <!-- twitter --> *}
 
-<div class="socialbutt {if not $google.enabled}disabled{else}enabled{/if}"> {* <!-- google --> *}
-<table>
-  <thead>
-    <tr><td colspan="2">
-      <label title="{if $google.enabled}{'Disable'|translate}{else}{'Enable'|translate}{/if}">
-        <img src="{$SOCIALBUTT_PATH}template/images/google_logo.png"/>
-        <input class="enable" style="display:none;" type="checkbox" name="google[enabled]" {if $google.enabled}checked="checked"{/if}/>
-      </label>
-    </td></tr>
-  </thead>
-  <tbody>
-    <tr class="property">
-      <td>
-        {'Button type'|translate}
-      </td>
-      <td></td>
-    </tr>
-    <tr class="button">
-      <td><label>
-        <img src="{$SOCIALBUTT_PATH}template/images/google_small.png"/>
-        <input type="radio" name="google[size]" value="small" {if $google.size=='small'}checked="checked"{/if}/>
-      </label></td>
-      <td><label>
-        <input type="radio" name="google[size]" value="medium" {if $google.size=='medium'}checked="checked"{/if}/>
-        <img src="{$SOCIALBUTT_PATH}template/images/google_medium.png"/>
-      </label></td>
-    </tr>
-    <tr class="button">
-      <td><label>
-        <img src="{$SOCIALBUTT_PATH}template/images/google_standard.png"/>
-        <input type="radio" name="google[size]" value="standard" {if $google.size=='standard'}checked="checked"{/if}/>
-      </label></td>
-      <td><label>
-        <input type="radio" name="google[size]" value="tall" {if $google.size=='tall'}checked="checked"{/if}/>
-        <img src="{$SOCIALBUTT_PATH}template/images/google_tall.png"/>
-      </label></td>
-    </tr>
-    <tr class="property not-light">
-      <td>
-        {'Annotation'|translate}
-      </td>
-      <td>
-        <label><input type="radio" name="google[annotation]" value="none" {if $google.annotation=='none'}checked="checked"{/if}/> {'None'|translate}</label><br>
-        <label><input type="radio" name="google[annotation]" value="bubble" {if $google.annotation=='bubble'}checked="checked"{/if}/> {'Bubble'|translate}</label><br>
-        <label><input type="radio" name="google[annotation]" value="inline" {if $google.annotation=='inline'}checked="checked"{/if}/> {'Inline text'|translate}</label>
-      </td>
-    </tr>
-  </tbody>
-</table>
-</div> {* <!-- google --> *}
 
 <br>
 
@@ -212,7 +162,7 @@ jQuery(".showInfo").tipTip({
       <td>
         {'Annotation'|translate}
       </td>
-      <td>
+    
         <!-- <label><input type="radio" name="facebook[layout]" value="none" {if $facebook.layout=='none'}checked="checked"{/if}/> {'None'|translate}</label><br> -->
         <label><input type="radio" name="facebook[layout]" value="button_count" {if $facebook.layout=='button_count'}checked="checked"{/if}/> {'Right bubble'|translate}</label><br>
         <label><input type="radio" name="facebook[layout]" value="box_count" {if $facebook.layout=='box_count'}checked="checked"{/if}/> {'Top bubble'|translate}</label><br>
