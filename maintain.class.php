@@ -14,11 +14,6 @@ class SocialButtons_maintain extends PluginMaintain
       'count' => 'bubble',
       'via' => null,
       ),
-    'google' => array(
-      'enabled' => true,
-      'size' => 'medium',
-      'annotation' => 'bubble',
-      ),
     'tumblr' => array(
       'enabled' => true,
       'type' => 'share_1',
@@ -62,19 +57,6 @@ class SocialButtons_maintain extends PluginMaintain
         if (!empty($temp['count'])) $this->default_config['twitter']['count'] = $temp['count'] ? 'bubble' : 'none';
         if (!empty($temp['via']))   $this->default_config['twitter']['via'] =   $temp['via'];
       }
-      if (isset($conf['GooglePlusOne']))
-      {
-        $temp = safe_unserialize($conf['GooglePlusOne']);
-        if (!empty($temp['size']))        $this->default_config['google']['size'] =       $temp['size'];
-        if (!empty($temp['annotation']))  $this->default_config['google']['annotation'] = $temp['annotation'];
-      }
-
-      conf_update_param('SocialButtons', $this->default_config, true);
-    }
-    else
-    {
-      $new_conf = safe_unserialize($conf['SocialButtons']);
-
       if (empty($new_conf['pinterest']))
       {
         $new_conf['pinterest'] = array(
